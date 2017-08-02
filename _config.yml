@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Site Title"
+title                    : "IE Matters"
 title_separator          : "-"
 name                     : "Your Name"
 description              : "An amazing website."
@@ -77,11 +77,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
+  name             : *name # *name is a YAML reference pointing to the &anchor earlier
+  avatar           : "/assets/images/sw.jpg"
+  bio              : "Just another Industrial Engineer"
+  location         : "Chicago, IL"
+  email            : "wshanshan@gmail.com"
   uri              :
   bitbucket        :
   codepen          :
@@ -89,13 +89,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "wshanshan"
   gitlab           :
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         :
+  linkedin         : "shanshan-wang-56590115"
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
@@ -245,3 +245,10 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true

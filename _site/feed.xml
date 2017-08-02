@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-02T17:03:21-05:00</updated><id>http://localhost:4000/</id><title type="html">IE Matters</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/sw.jpg&quot;, &quot;bio&quot;=&gt;&quot;Just another Industrial Engineer&quot;, &quot;location&quot;=&gt;&quot;Chicago, IL&quot;, &quot;email&quot;=&gt;&quot;wshanshan@gmail.com&quot;, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;&quot;wshanshan&quot;, &quot;gitlab&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;&quot;shanshan-wang-56590115&quot;, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name><email>wshanshan@gmail.com</email></author><entry><title type="html">Testpage</title><link href="http://localhost:4000/dataanalysis/testpage/" rel="alternate" type="text/html" title="Testpage" /><published>2017-08-02T00:00:00-05:00</published><updated>2017-08-02T00:00:00-05:00</updated><id>http://localhost:4000/dataanalysis/testpage</id><content type="html" xml:base="http://localhost:4000/dataanalysis/testpage/">&lt;p class=&quot;page__taxonomy&quot;&gt;
+    &lt;strong&gt;&lt;i class=&quot;fa fa-fw fa-tags&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Tags: &lt;/strong&gt;
+    &lt;span itemprop=&quot;keywords&quot;&gt;
+    
+      
+      
+      &lt;a href=&quot;http://localhost:4000/tags/#test&quot; class=&quot;page__taxonomy-item&quot; rel=&quot;tag&quot;&gt;test&lt;/a&gt;
+    
+    &lt;/span&gt;
+  &lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/sw.jpg&quot;, &quot;bio&quot;=&gt;&quot;Just another Industrial Engineer&quot;, &quot;location&quot;=&gt;&quot;Chicago, IL&quot;, &quot;email&quot;=&gt;&quot;wshanshan@gmail.com&quot;, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;&quot;wshanshan&quot;, &quot;gitlab&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;&quot;shanshan-wang-56590115&quot;, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name><email>wshanshan@gmail.com</email></author><category term="test" /><summary type="html">Tags: test</summary></entry><entry><title type="html">Why can’t I find a daycare</title><link href="http://localhost:4000/dataanalysis/Chicago-Daycare/" rel="alternate" type="text/html" title="Why can't I find a daycare" /><published>2017-08-01T00:00:00-05:00</published><updated>2017-08-01T00:00:00-05:00</updated><id>http://localhost:4000/dataanalysis/Chicago-Daycare</id><content type="html" xml:base="http://localhost:4000/dataanalysis/Chicago-Daycare/">&lt;p&gt;When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families. Besides the basic needs, I have only one wish: walking distance to home. However, surprisingly I couldn’t find any close-to-home daycare after months of search.&lt;/p&gt;
+
+&lt;p&gt;I wondered whether it’s only my bad location, bad luck or everyone else has the same problem. I went to the government website and downloaded the data of all the licensed daycare providers, trying to get some insights about ‘where to find daycares’. The findings are interesting.&lt;/p&gt;
+
+&lt;h2 id=&quot;basics-of-chicago-daycares&quot;&gt;Basics of Chicago Daycares&lt;/h2&gt;
+
+&lt;p&gt;Chicago has a lot of daycares ~ 2500. It’s 25% of Illnois’s total counts. Considering Chicago has 21% of state population (2.705 million in 12.8 million, 2016 US Census estimates), it’s not a bad representation.&lt;/p&gt;
+&lt;figure class=&quot;align-right&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/assets/images/daycaremap/pie_countsByType.png&quot; alt=&quot;Illinois childcare counts by type&quot; /&gt;
+  
+&lt;/figure&gt;
+&lt;figure class=&quot;align-right&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/assets/images/daycaremap/pie_capacityByType.png&quot; alt=&quot;Illinois childcare capacity by type&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;There are three types of licensed childcare providers: daycare centers, home daycares, and group home daycares.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Home daycares&lt;/strong&gt; and &lt;strong&gt;group daycares&lt;/strong&gt; are similar in terms of operations and capacity. Implied by their names, the owners care for kids in theirs homes. Based on the type of &lt;a href=&quot;http://ccrs.illinois.edu/providers/licensing.html&quot;&gt;licenses&lt;/a&gt;, the number of kids they can care for ranges from 8 to 16. Most of the childcare providers in Illinois are either home daycares or group home daycares (&amp;gt;70%). But because their limited scope, they only provide ~25% of the daytime care capacity.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Daycare centers&lt;/strong&gt; are usually in a much bigger scale than home-based cares. They have larger capacity, professionally managed staff and generally more expensive than home-based cares.&lt;/p&gt;
+
+&lt;h2 id=&quot;location-location-location&quot;&gt;Location, location, location&lt;/h2&gt;
+
+&lt;p&gt;What’s interesting about daycare centers and home daycares are their locations. As shown in the chart below, while home-based daycares are clustered in the west and south side communities, they are rare on the central and north sides. Those regions, where home-based cares thrive, have a pretty good density of providers. In the areas where big centers prevail, it’s logical to see that centers are relatively farther away from each other since each center has more capacity. Because of the lower density and uneven distributions of daycare centers, sometimes you will see patches of ‘empty’ space in the middle of a very busy area.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, my home is in such an empty spot, which makes it difficult to find a daycare within walking distance.&lt;/p&gt;
+
+&lt;figure class=&quot;align-center&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/assets/images/daycaremap/scatterplot_locations.png&quot; alt=&quot;Chicago daycare locations&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;capacity&quot;&gt;Capacity&lt;/h2&gt;
+
+&lt;p&gt;Less daycare doesn’t mean less capacity. So I sum up the capacity of all types of daycares in each community and normalize it by the area size.&lt;/p&gt;
+
+&lt;p&gt;At first glance, it seems that my area ‘lake view’ is one of the top 10 out of 77 Chicago coummunities that have the highest capacity density. The top list also includes quite a few popular residential communities that mostly is occupied by daycare centers, such as ARMOUR SQUARE (China town), near north side, lincoln park. It’s a reaonable result considering the large capacity of centers.&lt;/p&gt;
+&lt;figure class=&quot;align-right&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/assets/images/daycaremap/communityByCapacityDensity.png&quot; alt=&quot;Chicago community colormap - daycare capacity density&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Top 10 Chicago communities rank by capacity area density:&lt;/p&gt;
+
+&lt;ol class=&quot;small&quot;&gt;
+  &lt;li&gt;ARMOUR SQUARE&lt;/li&gt;
+  &lt;li&gt;NEAR NORTH SIDE&lt;/li&gt;
+  &lt;li&gt;LINCOLN PARK&lt;/li&gt;
+  &lt;li&gt;LOGAN SQUARE&lt;/li&gt;
+  &lt;li&gt;UPTOWN&lt;/li&gt;
+  &lt;li&gt;GREATER GRAND CROSSING&lt;/li&gt;
+  &lt;li&gt;LAKE VIEW&lt;/li&gt;
+  &lt;li&gt;NEAR SOUTH SIDE&lt;/li&gt;
+  &lt;li&gt;WASHINGTON HEIGHTS&lt;/li&gt;
+  &lt;li&gt;HUMBOLDT PARK&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;full&quot;&gt;&lt;/figure&gt;
+
+&lt;p&gt;But does it mean the capacity in those ‘daycare centers’ areas are sufficient. I downloaded the 2010 US census population data and used it to calculate the capacity per person. Here is result:&lt;/p&gt;
+&lt;figure class=&quot;align-right&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/assets/images/daycaremap/communityByCapacityPerPerson.png&quot; alt=&quot;Chicago community colormap - daycare capacity by person&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Top 10 Chicago communities rank by capacity per person:&lt;/p&gt;
+
+&lt;ol class=&quot;small&quot;&gt;
+  &lt;li&gt;AUSTIN&lt;/li&gt;
+  &lt;li&gt;AUBURN GRESHAM&lt;/li&gt;
+  &lt;li&gt;CHICAGO LAWN&lt;/li&gt;
+  &lt;li&gt;WASHINGTON HEIGHTS&lt;/li&gt;
+  &lt;li&gt;AVALON PARK&lt;/li&gt;
+  &lt;li&gt;WEST GARFIELD PARK&lt;/li&gt;
+  &lt;li&gt;SOUTH SHORE&lt;/li&gt;
+  &lt;li&gt;CHATHAM&lt;/li&gt;
+  &lt;li&gt;BELMONT CRAGIN&lt;/li&gt;
+  &lt;li&gt;GREATER GRAND CROSSING&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It turns out that the relative large capacity of day cares in my area is quickly offset by the larger population. The capacity per person in the ‘center’ area looks pretty pale compared to other areas.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;The analysis results are pretty aligned with my experiences. There are not too many daycare providers with my walking distance. Among the limited choices, all of them have long wait lists that we couldn’t get into any. I end up with driving my son to a slightly farther daycares everyday. We love the daycare. However, it’s still not a convenient choice.&lt;/p&gt;
+
+&lt;p&gt;It’s hard to tell why there are so few home-based daycares in my neighborhood.&lt;/p&gt;
+
+&lt;h2 id=&quot;notes-on-the-data&quot;&gt;Notes on the data&lt;/h2&gt;
+&lt;p&gt;The limitation of the study: licensed capacity doesn’t equal to current service capacity.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/sw.jpg&quot;, &quot;bio&quot;=&gt;&quot;Just another Industrial Engineer&quot;, &quot;location&quot;=&gt;&quot;Chicago, IL&quot;, &quot;email&quot;=&gt;&quot;wshanshan@gmail.com&quot;, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;&quot;wshanshan&quot;, &quot;gitlab&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;&quot;shanshan-wang-56590115&quot;, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name><email>wshanshan@gmail.com</email></author><category term="Python" /><category term="map" /><category term="geopandas" /><category term="lifedata" /><summary type="html">When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families. Besides the basic needs, I have only one wish: walking distance to home. However, surprisingly I couldn’t find any close-to-home daycare after months of search.</summary></entry></feed>
