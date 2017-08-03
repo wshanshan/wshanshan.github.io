@@ -18,7 +18,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : "staticman" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -78,8 +78,8 @@ analytics:
 # Site Author
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
-  avatar           : "/assets/images/sw.jpg"
-  bio              : "Just another Industrial Engineer"
+  avatar           : "/assets/images/sw2.jpg"
+  bio              : "A shameless value-seeking data interrogator, model tinkerer on the prowl"
   location         : "Chicago, IL"
   email            : "wshanshan@gmail.com"
   uri              :
@@ -242,7 +242,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true # true
       share: true
       related: true
   # _pages

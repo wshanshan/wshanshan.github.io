@@ -1,9 +1,0 @@
----
-title:  "Testpage"
-categories: DataAnalysis
-tags: test
-thumbnail: /assets/images/daycaremap/pie_countsByType.png
----
-
-{% include tag-list.html %}
-
