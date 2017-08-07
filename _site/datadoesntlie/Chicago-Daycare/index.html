@@ -24,7 +24,7 @@
 
 
 
-<meta name="description" content="When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families. Besides the basic needs, I have only one wish: walking distance to home. However, surprisingly I couldn’t find any close-to-home daycare after months of search.">
+<meta name="description" content="When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families - Lake view, Chicago. It is 2nd in population among Chicago’s 77 communities.">
 
 
 
@@ -36,12 +36,12 @@
 <meta property="og:title" content="Why can’t I find a daycare">
 
 
-  <link rel="canonical" href="http://localhost:4000/dataanalysis/Chicago-Daycare/">
-  <meta property="og:url" content="http://localhost:4000/dataanalysis/Chicago-Daycare/">
+  <link rel="canonical" href="http://localhost:4000/datadoesntlie/Chicago-Daycare/">
+  <meta property="og:url" content="http://localhost:4000/datadoesntlie/Chicago-Daycare/">
 
 
 
-  <meta property="og:description" content="When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families. Besides the basic needs, I have only one wish: walking distance to home. However, surprisingly I couldn’t find any close-to-home daycare after months of search.">
+  <meta property="og:description" content="When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families - Lake view, Chicago. It is 2nd in population among Chicago’s 77 communities.">
 
 
 
@@ -275,7 +275,7 @@
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Why can’t I find a daycare">
-    <meta itemprop="description" content="When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families. Besides the basic needs, I have only one wish: walking distance to home. However, surprisingly I couldn’t find any close-to-home daycare after months of search.">
+    <meta itemprop="description" content="When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families - Lake view, Chicago. It is 2nd in population among Chicago’s 77 communities.">
     <meta itemprop="datePublished" content="August 01, 2017">
     
 
@@ -297,50 +297,54 @@
       
 
       <section class="page__content" itemprop="text">
-        <p>When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families. Besides the basic needs, I have only one wish: walking distance to home. However, surprisingly I couldn’t find any close-to-home daycare after months of search.</p>
+        <p>When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families - Lake view, Chicago. It is <a href="https://gist.github.com/wshanshan/e150855f7b09bebc9b1064e30e55a071">2nd in population</a> among Chicago’s 77 communities.</p>
 
-<p>I wondered whether it’s only my bad location, bad luck or everyone else has the same problem. I went to the government website and downloaded the data of all the licensed daycare providers, trying to get some insights about ‘where to find daycares’. The findings are interesting.</p>
+<p>I didn’t ask for much about daycares (I thought..). Besides the basics, I only have one simple wish: walking distance to home. But after months of search, I couldn’t find any avaiable spot. I finally gave up but couldn’t stop wondering: Is it only my bad luck or does everyone have the same problem?</p>
+
+<p>So I went to the <a href="https://sunshine.dcfs.illinois.gov/Content/Licensing/Daycare/ProviderLookup.aspx">government website</a>, downloaded the data of all the licensed daycare providers, queried their geolocations from Google Geocoding API, and put them on a map. The findings are interesting.</p>
 
 <h2 id="basics-of-chicago-daycares">Basics of Chicago Daycares</h2>
 
 <p>Chicago has a lot of daycares ~ 2500. It’s 25% of Illnois’s total counts. Considering Chicago has 21% of state population (2.705 million in 12.8 million, 2016 US Census estimates), it’s not a bad representation.</p>
+
 <figure class="align-right">
-  <img src="http://localhost:4000/assets/images/daycaremap/pie_countsByType.png" alt="Illinois childcare counts by type" />
+  <img src="http://localhost:4000/assets/images/chicagoDaycares/pie_countsByType.png" alt="Illinois childcare counts by type" />
   
 </figure>
 <figure class="align-right">
-  <img src="http://localhost:4000/assets/images/daycaremap/pie_capacityByType.png" alt="Illinois childcare capacity by type" />
+  <img src="http://localhost:4000/assets/images/chicagoDaycares/pie_capacityByType.png" alt="Illinois childcare capacity by type" />
   
 </figure>
 
-<p>There are three types of licensed childcare providers: daycare centers, home daycares, and group home daycares.</p>
+<p>There are three types of licensed childcare providers: <em>daycare centers</em>, <em>home daycares</em>, and <em>group home daycares</em>. <em>Home daycares</em> and <em>group daycares</em> are usually small operations at someone’s home. Limited by their <a href="http://ccrs.illinois.edu/providers/licensing.html">licenses</a>, they can care for up to 8 to 16 kids. <em>Daycare centers</em> are much bigger. The average capacity is around ~ 70. Some large ones have capacity more than 300.</p>
 
-<p><strong>Home daycares</strong> and <strong>group daycares</strong> are similar in terms of operations and capacity. Implied by their names, the owners care for kids in theirs homes. Based on the type of <a href="http://ccrs.illinois.edu/providers/licensing.html">licenses</a>, the number of kids they can care for ranges from 8 to 16. Most of the childcare providers in Illinois are either home daycares or group home daycares (&gt;70%). But because their limited scope, they only provide ~25% of the daytime care capacity.</p>
+<p>Most of the childcare providers in Illinois are either home daycares or group home daycares (~71%). Nevertheless, daycare centers provide ~74% of total capacity.</p>
 
-<p><strong>Daycare centers</strong> are usually in a much bigger scale than home-based cares. They have larger capacity, professionally managed staff and generally more expensive than home-based cares.</p>
+<h2 id="location-location-location">Location, Location, Location</h2>
 
-<h2 id="location-location-location">Location, location, location</h2>
-
-<p>What’s interesting about daycare centers and home daycares are their locations. As shown in the chart below, while home-based daycares are clustered in the west and south side communities, they are rare on the central and north sides. Those regions, where home-based cares thrive, have a pretty good density of providers. In the areas where big centers prevail, it’s logical to see that centers are relatively farther away from each other since each center has more capacity. Because of the lower density and uneven distributions of daycare centers, sometimes you will see patches of ‘empty’ space in the middle of a very busy area.</p>
-
-<p>Unfortunately, my home is in such an empty spot, which makes it difficult to find a daycare within walking distance.</p>
+<p>What’s interesting about different types of daycares are their locations. As shown in the map below, home-based daycares are clustered in west and south Chicago communities, while daycare centers dominate central and north sides.</p>
 
 <figure class="align-center">
-  <img src="http://localhost:4000/assets/images/daycaremap/scatterplot_locations.png" alt="Chicago daycare locations" />
+  <img src="http://localhost:4000/assets/images/chicagoDaycares/scatterplot_locations.png" alt="Chicago daycare locations" />
   
 </figure>
+
+<p>Why is it happening? Maybe people living in central and north sides don’t like the idea of opening daycares in their homes? Maybe there are less apartment/houses in those areas appropriate as home daycares? Maybe people in these communities generally prefer daycare centers to home-based cares, so there is not enough demand? Maybe it’s a mix of all above.</p>
+
+<p>The consequence is apparent. In the communities where only big centers prevail, providers are relatively farther away from each other because of their large capacities, leaving patches of ‘empty’ space on the map.</p>
+
+<p>Unfortunately, my home is in such an empty spot, which makes it difficult to find a daycare within walking distance. ᕙ(⇀‸↼‶)ᕗ</p>
 
 <h2 id="capacity">Capacity</h2>
 
-<p>Less daycare doesn’t mean less capacity. So I sum up the capacity of all types of daycares in each community and normalize it by the area size.</p>
+<p>What makes things even tricker is the capacity. Although Lake View is one of the top 10 communites having the highest daycare capacity per square feet, it’s low on capacity by person. So among the only 2 daycares in my walking distance (even I’m willing to walk 20 minutes one way), both have unrealistically long waiting lists.</p>
 
-<p>At first glance, it seems that my area ‘lake view’ is one of the top 10 out of 77 Chicago coummunities that have the highest capacity density. The top list also includes quite a few popular residential communities that mostly is occupied by daycare centers, such as ARMOUR SQUARE (China town), near north side, lincoln park. It’s a reaonable result considering the large capacity of centers.</p>
 <figure class="align-right">
-  <img src="http://localhost:4000/assets/images/daycaremap/communityByCapacityDensity.png" alt="Chicago community colormap - daycare capacity density" />
+  <img src="http://localhost:4000/assets/images/chicagoDaycares/communityByCapacityDensity.png" alt="Chicago community colormap - daycare capacity density" />
   
 </figure>
 
-<p>Top 10 Chicago communities rank by capacity area density:</p>
+<p>Top 10 Chicago communities rank by daycare capacity per square feet:</p>
 
 <ol class="small">
   <li>ARMOUR SQUARE</li>
@@ -357,9 +361,8 @@
 
 <figure class="full"></figure>
 
-<p>But does it mean the capacity in those ‘daycare centers’ areas are sufficient. I downloaded the 2010 US census population data and used it to calculate the capacity per person. Here is result:</p>
 <figure class="align-right">
-  <img src="http://localhost:4000/assets/images/daycaremap/communityByCapacityPerPerson.png" alt="Chicago community colormap - daycare capacity by person" />
+  <img src="http://localhost:4000/assets/images/chicagoDaycares/communityByCapacityPerPerson.png" alt="Chicago community colormap - daycare capacity by person" />
   
 </figure>
 
@@ -378,16 +381,17 @@
   <li>GREATER GRAND CROSSING</li>
 </ol>
 
-<p>It turns out that the relative large capacity of day cares in my area is quickly offset by the larger population. The capacity per person in the ‘center’ area looks pretty pale compared to other areas.</p>
+<h2 id="on-a-final-note">On a final note</h2>
 
-<h2 id="summary">Summary</h2>
+<p>The data analysis perfectly explains my experience.</p>
 
-<p>The analysis results are pretty aligned with my experiences. There are not too many daycare providers with my walking distance. Among the limited choices, all of them have long wait lists that we couldn’t get into any. I end up with driving my son to a slightly farther daycares everyday. We love the daycare. However, it’s still not a convenient choice.</p>
+<p>Now I drive my son to daycare everyday. I like the daycare but still don’t like the driving. But at least I know that I’m only one of many.</p>
 
-<p>It’s hard to tell why there are so few home-based daycares in my neighborhood.</p>
+<p>If you happen to thinking about opening a daycare, come to my neighborhood! Your business will boom here!</p>
 
-<h2 id="notes-on-the-data">Notes on the data</h2>
-<p>The limitation of the study: licensed capacity doesn’t equal to current service capacity.</p>
+<h2 id="technical-notes">Technical notes</h2>
+
+<p>I use Python <a href="http://geopandas.org/">Geopandas</a> to make the charts. Here is the gist: <a href="https://gist.github.com/wshanshan/e150855f7b09bebc9b1064e30e55a071">chicagoDaycares.ipynb</a></p>
 
 
         
@@ -409,15 +413,23 @@
     
       
       
+      <a href="http://localhost:4000/tags/#chicago" class="page__taxonomy-item" rel="tag">Chicago</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#daycare" class="page__taxonomy-item" rel="tag">daycare</a><span class="sep">, </span>
+    
+      
+      
       <a href="http://localhost:4000/tags/#geopandas" class="page__taxonomy-item" rel="tag">geopandas</a><span class="sep">, </span>
     
       
       
-      <a href="http://localhost:4000/tags/#lifedata" class="page__taxonomy-item" rel="tag">lifedata</a><span class="sep">, </span>
+      <a href="http://localhost:4000/tags/#map" class="page__taxonomy-item" rel="tag">map</a><span class="sep">, </span>
     
       
       
-      <a href="http://localhost:4000/tags/#map" class="page__taxonomy-item" rel="tag">map</a><span class="sep">, </span>
+      <a href="http://localhost:4000/tags/#opendata" class="page__taxonomy-item" rel="tag">openData</a><span class="sep">, </span>
     
       
       
@@ -442,7 +454,7 @@
     
       
       
-      <a href="http://localhost:4000/categories/#dataanalysis" class="page__taxonomy-item" rel="tag">DataAnalysis</a>
+      <a href="http://localhost:4000/categories/#datadoesntlie" class="page__taxonomy-item" rel="tag">DataDoesntLie</a>
     
     </span>
   </p>
@@ -458,13 +470,13 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Why can't I find a daycare http://localhost:4000/dataanalysis/Chicago-Daycare/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Why can't I find a daycare http://localhost:4000/datadoesntlie/Chicago-Daycare/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/dataanalysis/Chicago-Daycare/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/datadoesntlie/Chicago-Daycare/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=http://localhost:4000/dataanalysis/Chicago-Daycare/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+  <a href="https://plus.google.com/share?url=http://localhost:4000/datadoesntlie/Chicago-Daycare/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/dataanalysis/Chicago-Daycare/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/datadoesntlie/Chicago-Daycare/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 

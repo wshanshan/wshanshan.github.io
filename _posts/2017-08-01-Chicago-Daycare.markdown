@@ -1,43 +1,48 @@
 ---
 title:  "Why can't I find a daycare"
-categories: DataAnalysis
-tags: Python map geopandas lifedata
+categories: DataDoesntLie
+tags: Python map geopandas Chicago daycare openData
 thumbnail: /assets/images/daycaremap/pie_countsByType.png
 ---
 
-When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families. Besides the basic needs, I have only one wish: walking distance to home. However, surprisingly I couldn't find any close-to-home daycare after months of search.
+When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families - Lake view, Chicago. It is [2nd in population](https://gist.github.com/wshanshan/e150855f7b09bebc9b1064e30e55a071) among Chicago's 77 communities.
 
-I wondered whether it's only my bad location, bad luck or everyone else has the same problem. I went to the government website and downloaded the data of all the licensed daycare providers, trying to get some insights about 'where to find daycares'. The findings are interesting. 
+I didn't ask for much about daycares (I thought..). Besides the basics, I only have one simple wish: walking distance to home. But after months of search, I couldn't find any avaiable spot. I finally gave up but couldn't stop wondering: Is it only my bad luck or does everyone have the same problem?
+
+So I went to the [government website](https://sunshine.dcfs.illinois.gov/Content/Licensing/Daycare/ProviderLookup.aspx), downloaded the data of all the licensed daycare providers, queried their geolocations from Google Geocoding API, and put them on a map. The findings are interesting. 
 
 ## Basics of Chicago Daycares
 
 Chicago has a lot of daycares ~ 2500. It's 25% of Illnois's total counts. Considering Chicago has 21% of state population (2.705 million in 12.8 million, 2016 US Census estimates), it's not a bad representation. 
-{% include figure image_path="/assets/images/daycaremap/pie_countsByType.png" alt="Illinois childcare counts by type" %}{: .align-right}
-{% include figure image_path="/assets/images/daycaremap/pie_capacityByType.png" alt="Illinois childcare capacity by type" %}{: .align-right}
 
-There are three types of licensed childcare providers: daycare centers, home daycares, and group home daycares. 
+{% include figure image_path="/assets/images/chicagoDaycares/pie_countsByType.png" alt="Illinois childcare counts by type" %}{: .align-right}
+{% include figure image_path="/assets/images/chicagoDaycares/pie_capacityByType.png" alt="Illinois childcare capacity by type" %}{: .align-right}
+
+There are three types of licensed childcare providers: *daycare centers*, *home daycares*, and *group home daycares*. *Home daycares* and *group daycares* are usually small operations at someone's home. Limited by their [licenses](http://ccrs.illinois.edu/providers/licensing.html), they can care for up to 8 to 16 kids. *Daycare centers* are much bigger. The average capacity is around ~ 70. Some large ones have capacity more than 300. 
+
+Most of the childcare providers in Illinois are either home daycares or group home daycares (~71%). Nevertheless, daycare centers provide ~74% of total capacity. 
 
 
-**Home daycares** and **group daycares** are similar in terms of operations and capacity. Implied by their names, the owners care for kids in theirs homes. Based on the type of [licenses](http://ccrs.illinois.edu/providers/licensing.html), the number of kids they can care for ranges from 8 to 16. Most of the childcare providers in Illinois are either home daycares or group home daycares (>70%). But because their limited scope, they only provide ~25% of the daytime care capacity. 
+## Location, Location, Location
 
-**Daycare centers** are usually in a much bigger scale than home-based cares. They have larger capacity, professionally managed staff and generally more expensive than home-based cares. 
+What's interesting about different types of daycares are their locations. As shown in the map below, home-based daycares are clustered in west and south Chicago communities, while daycare centers dominate central and north sides. 
 
-## Location, location, location
+{% include figure image_path="/assets/images/chicagoDaycares/scatterplot_locations.png" alt="Chicago daycare locations" %}{: .align-center}
 
-What's interesting about daycare centers and home daycares are their locations. As shown in the chart below, while home-based daycares are clustered in the west and south side communities, they are rare on the central and north sides. Those regions, where home-based cares thrive, have a pretty good density of providers. In the areas where big centers prevail, it's logical to see that centers are relatively farther away from each other since each center has more capacity. Because of the lower density and uneven distributions of daycare centers, sometimes you will see patches of 'empty' space in the middle of a very busy area.
+Why is it happening? Maybe people living in central and north sides don't like the idea of opening daycares in their homes? Maybe there are less apartment/houses in those areas appropriate as home daycares? Maybe people in these communities generally prefer daycare centers to home-based cares, so there is not enough demand? Maybe it's a mix of all above. 
 
-Unfortunately, my home is in such an empty spot, which makes it difficult to find a daycare within walking distance. 
+The consequence is apparent. In the communities where only big centers prevail, providers are relatively farther away from each other because of their large capacities, leaving patches of 'empty' space on the map. 
 
-{% include figure image_path="/assets/images/daycaremap/scatterplot_locations.png" alt="Chicago daycare locations" %}{: .align-center}
+Unfortunately, my home is in such an empty spot, which makes it difficult to find a daycare within walking distance. ᕙ(⇀‸↼‶)ᕗ
+
 
 ## Capacity
 
-Less daycare doesn't mean less capacity. So I sum up the capacity of all types of daycares in each community and normalize it by the area size. 
+What makes things even tricker is the capacity. Although Lake View is one of the top 10 communites having the highest daycare capacity per square feet, it's low on capacity by person. So among the only 2 daycares in my walking distance (even I'm willing to walk 20 minutes one way), both have unrealistically long waiting lists. 
+ 
+{% include figure image_path="/assets/images/chicagoDaycares/communityByCapacityDensity.png" alt="Chicago community colormap - daycare capacity density" %}{: .align-right}
 
-At first glance, it seems that my area 'lake view' is one of the top 10 out of 77 Chicago coummunities that have the highest capacity density. The top list also includes quite a few popular residential communities that mostly is occupied by daycare centers, such as ARMOUR SQUARE (China town), near north side, lincoln park. It's a reaonable result considering the large capacity of centers. 
-{% include figure image_path="/assets/images/daycaremap/communityByCapacityDensity.png" alt="Chicago community colormap - daycare capacity density" %}{: .align-right}
-
-Top 10 Chicago communities rank by capacity area density:
+Top 10 Chicago communities rank by daycare capacity per square feet:
 
 1. ARMOUR SQUARE
 2. NEAR NORTH SIDE
@@ -53,8 +58,7 @@ Top 10 Chicago communities rank by capacity area density:
 
 <figure class="full"></figure>
 
-But does it mean the capacity in those 'daycare centers' areas are sufficient. I downloaded the 2010 US census population data and used it to calculate the capacity per person. Here is result: 
-{% include figure image_path="/assets/images/daycaremap/communityByCapacityPerPerson.png" alt="Chicago community colormap - daycare capacity by person" %}{: .align-right}
+{% include figure image_path="/assets/images/chicagoDaycares/communityByCapacityPerPerson.png" alt="Chicago community colormap - daycare capacity by person" %}{: .align-right}
 
 Top 10 Chicago communities rank by capacity per person:
 
@@ -70,16 +74,20 @@ Top 10 Chicago communities rank by capacity per person:
 10. GREATER GRAND CROSSING
 {: .small}
 
-It turns out that the relative large capacity of day cares in my area is quickly offset by the larger population. The capacity per person in the 'center' area looks pretty pale compared to other areas. 
+## On a final note
 
-## Summary
+The data analysis perfectly explains my experience. 
 
-The analysis results are pretty aligned with my experiences. There are not too many daycare providers with my walking distance. Among the limited choices, all of them have long wait lists that we couldn't get into any. I end up with driving my son to a slightly farther daycares everyday. We love the daycare. However, it's still not a convenient choice. 
+Now I drive my son to daycare everyday. I like the daycare but still don't like the driving. But at least I know that I'm only one of many. 
 
-It's hard to tell why there are so few home-based daycares in my neighborhood. 
+If you happen to thinking about opening a daycare, come to my neighborhood! Your business will boom here! 
 
-## Notes on the data 
-The limitation of the study: licensed capacity doesn't equal to current service capacity.
+## Technical notes
+
+I use Python [Geopandas](http://geopandas.org/) to make the charts. Here is the gist: [chicagoDaycares.ipynb](https://gist.github.com/wshanshan/e150855f7b09bebc9b1064e30e55a071)
+
+
+
 
 
 
