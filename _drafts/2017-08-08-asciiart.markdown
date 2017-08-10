@@ -1,0 +1,32 @@
+---
+title:  "Create ASCII art with Python"
+categories: Coding4Art
+tags: Python ASCII Art Tutorial
+gallery:
+  - url: /assets/images/asciiart/IQaH96.jpeg
+    image_path: /assets/images/asciiart/IQaH96.jpeg
+    alt: "Input image"
+    title: "Input image"
+  - url: /assets/images/asciiart/results.png
+    image_path: /assets/images/asciiart/results.png
+    alt: "Output image example 1. Color: black to blue gradient"
+    title: "Output image example 1. Color: black to blue gradient"
+  - url: /assets/images/asciiart/results_pink.png
+    image_path: /assets/images/asciiart/results_pink.png
+    alt: "Output image example 2. Color: blue to pink gradient"
+    title: "Output image example 2. Color: blue to pink gradient"
+---
+
+This is a tutorial of how to create ASCII art using Python. You can use any image as long as it has good contrasted colors. 
+
+You can use the output image in so many different ways. For example, it's a fabulous gift for a geeky friend. It is a stylish decoration when [printed on curtain](http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/). It will also look good on mugs, T-shirts, ... really any printable media. 
+
+The great thing about those coded artworks are, you can **change the code**! Here I will introdue the basic flow of the codes. We will use libraries: Image, Colour and a little bit Numpy. Once you understand how the existing codes work, you can then change it to use different fonts, even symbols, to turn your favorite picture into your unique signature artwork. 
+
+Example:
+
+{% include gallery caption="From left to right: Input, Output example1, Output example2" %}
+
+
+
+ 

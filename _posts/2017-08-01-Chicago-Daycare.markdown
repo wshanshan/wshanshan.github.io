@@ -1,8 +1,7 @@
 ---
 title:  "Why can't I find a daycare"
-categories: DataDoesntLie
+categories: DataDoesNotLie
 tags: Python map geopandas Chicago daycare openData
-thumbnail: /assets/images/daycaremap/pie_countsByType.png
 ---
 
 When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families - Lake View, Chicago. It is [2nd in population](https://gist.github.com/wshanshan/e150855f7b09bebc9b1064e30e55a071) among Chicago's 77 communities.
@@ -84,7 +83,7 @@ If you happen to thinking about opening a daycare, come to my neighborhood! Your
 
 ## Technical notes
 
-I use Python [Geopandas](http://geopandas.org/) to make the charts. Here is the gist: [chicagoDaycares.ipynb](https://gist.github.com/wshanshan/e150855f7b09bebc9b1064e30e55a071)
+I use Python [Geopandas](http://geopandas.org/) to make the charts. Here is the gist if you are interested: [chicagoDaycares.ipynb](https://gist.github.com/wshanshan/e150855f7b09bebc9b1064e30e55a071)
 
 
 
