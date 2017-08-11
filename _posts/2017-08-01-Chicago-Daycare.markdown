@@ -2,12 +2,12 @@
 title:  "Why can't I find a daycare"
 categories: DataDoesNotLie
 tags: Python map geopandas Chicago daycare openData
-excerpt: Location analysis of Chicago daycares. GIS map enabled by Python Geopanda. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census. 
+excerpt: Location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census. 
 ---
 
 When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families - Lake View, Chicago. It is [2nd in population](https://gist.github.com/wshanshan/e150855f7b09bebc9b1064e30e55a071) among Chicago's 77 communities.
 
-I didn't ask much about daycares (I thought...). Besides the basics, I only have one simple wish: walking distance to home. But after months of searching, I couldn't find any avaiable spot. I finally gave up but couldn't stop wondering: Is it only my bad luck or does everyone have the same problem?
+I didn't ask much about daycares (I thought...). Besides the basics, I only have one simple wish: walking distance to home. But after months of searching, I couldn't find any available spot. I finally gave up but couldn't stop wondering: Is it only my bad luck or does everyone have the same problem?
 
 So I went to the [government website](https://sunshine.dcfs.illinois.gov/Content/Licensing/Daycare/ProviderLookup.aspx), downloaded the data of all the licensed daycare providers, queried their geolocations from Google Geocoding API, and put them on a map. The findings are interesting. 
 
@@ -38,7 +38,7 @@ Unfortunately, my home is in such an empty spot, which makes it difficult to fin
 
 ## Capacity
 
-What makes things even trickier is the capacity. Although Lake View is one of the top 10 communites having the highest daycare capacity per square feet, it's low on capacity by person. So among the only 2 daycares in my walking distance (even though I'm willing to walk 20 minutes one way), both have unrealistically long waiting lists. 
+What makes things even trickier is the capacity. Although Lake View is one of the top 10 communities having the highest daycare capacity per square feet, it's low on capacity by person. So among the only 2 daycares in my walking distance (even though I'm willing to walk 20 minutes one way), both have unrealistically long waiting lists. 
  
 {% include figure image_path="/assets/images/chicagoDaycares/communityByCapacityDensity.png" alt="Chicago community colormap - daycare capacity density" %}{: .align-right}
 
@@ -85,7 +85,6 @@ If you happen to thinking about opening a daycare, come to my neighborhood! Your
 ## Technical notes
 
 I use Python [Geopandas](http://geopandas.org/) to make the charts. Here is the gist if you are interested: [chicagoDaycares.ipynb](https://gist.github.com/wshanshan/e150855f7b09bebc9b1064e30e55a071)
-
 
 
 

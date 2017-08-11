@@ -290,7 +290,7 @@
 
 
 
-  3 minute read
+  2 minute read
 </p>
           
         </header>
@@ -299,7 +299,7 @@
       <section class="page__content" itemprop="text">
         <p>In this post, I am going to show you how to create ASCII art from an existing picture using Python. You can use any picture as long as it has good contrast in brightness.</p>
 
-<p>You can use the output in many ways. Printed ASCII art is a fabulous gift for a geeky friend. It is a stylish decoration. See how it looks <a href="http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/">printed on curtain</a>! It will look good on mugs, T-shirts, …</p>
+<p>Printed ASCII art is a fabulous gift for a geeky friend. It is a stylish decoration. See how it looks <a href="http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/">printed on curtain</a>! It will look good on mugs, T-shirts, …</p>
 
 <p>The great thing about coded artwork is that you can easily change the code to <strong>give it your personal touch</strong>! Here I will introduce the basic flow. We will use a few Python libraries– <a href="https://pillow.readthedocs.io">Pillow</a>, <a href="https://pypi.python.org/pypi/colour">Colour</a> and a little bit <a href="https://pypi.python.org/pypi/numpy">Numpy</a>. Once you understand how the existing code works, you can then change fonts/symbols, try different colors, to turn your favorite picture into your unique signature artwork.</p>
 
@@ -339,7 +339,7 @@
   
 </figure>
 
-<p>One challenge as you can see from the above demonstration is that symbols are not square. If we simply replace pixels in an image with symbols one for one, we will get a picture with distorted width and height. To avoid that, we need to calculate the number of symbols to use based on symbol width/height ratio. For example, if the symbol we use is 3:4 on the width and height, the number of symbols on the rows and columns need to be 4:3 to fill a square space.</p>
+<p>One challenge as you can see from above is that symbols are not square. If we simply replace pixels in an image with symbols one for one, we will get a picture with distorted width and height. To avoid that, we need to calculate the number of symbols to use based on symbol width/height ratio. For example, if the symbol we use is 3:4 on the width and height, the number of symbols on the columns and rows need to be 4:3 to fill a square space.</p>
 
 <figure class="third">
   <img src="http://localhost:4000/assets/images/asciiart/demo2.png" alt="symbol block demo2" />
@@ -349,7 +349,7 @@
   
 </figure>
 
-<p>Another thing to notice is that one symbol is much larger than a pixel(px). So it’s not a bad idea to size down the picture before the conversion. Our program will handle it using a parameter <code class="highlighter-rouge">SC</code>, scaling factor. It’s between 0(exclusive) and 1(inclusive). The bigger the number, the more details you would see in the output and the bigger the output image would be. If you want to keep the output of the same pixel size as the input, set <code class="highlighter-rouge">SC</code> to be 1/<code class="highlighter-rouge">symbol width in pixels</code>.</p>
+<p>Another thing to notice is that one symbol is much larger than one pixel(px). So it’s not a bad idea to size down the picture before the conversion. Our program handles it using a parameter <code class="highlighter-rouge">SC</code>, scaling factor. It’s between 0(exclusive) and 1(inclusive). The bigger the number, the more details you would see in the output and the bigger the output image would be. If you want to keep the output of the same pixel size as the input, set <code class="highlighter-rouge">SC</code> to be 1/<code class="highlighter-rouge">symbol width in pixels</code>.</p>
 
 <p>In this project, we are using three libraries Pillow, Colour, Numpy. Pillow handles all the image processing - reading, resizing, writing. Colour gives us the beautiful gradient color. Numpy makes the grayscale conversion easy. You will need to install all these libraries before hands.</p>
 
@@ -488,7 +488,7 @@
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Location analysis of Chicago daycares. GIS map enabled by Python Geopanda. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census.
+    <p class="archive__item-excerpt" itemprop="description">Location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census.
 </p>
   </article>
 </div>
