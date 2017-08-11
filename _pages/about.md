@@ -15,7 +15,7 @@ Hi, Thanks for checking out this website. My name is Shanshan Wang. I'm an indus
 
 I develop analytics to improve system efficiency mostly as a consultant. It is a weird profession. It keeps me worrying about others' problems. But I enjoy it. I like the thrills of seeing what I do lead to some kind of improvements in others' lives, or guide people away from mistakes that can be avoided.
 
-My professional training is in Industrial Engineering. I've been practicing simulation, optimization, machine learning for years. As a slave to my own curiority, I play with math puzzles, Python Flask, maps, AWS as well. There are way too many fun things ardound.
+My professional training is in Industrial Engineering. I've been practicing simulation, optimization, machine learning for years. As a slave to my own curiority, I play with math puzzles, Python Flask, maps, AWS... There are way too many fun things around.
 
 I hope you find something interesting here. Drop me a note.
 
