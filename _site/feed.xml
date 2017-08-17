@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-16T21:43:27-05:00</updated><id>http://localhost:4000/</id><title type="html">Tinkering</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/sw2.jpg&quot;, &quot;bio&quot;=&gt;&quot;A data interrogator, model tinkerer on the prowl&quot;, &quot;location&quot;=&gt;&quot;Chicago, IL&quot;, &quot;email&quot;=&gt;&quot;wshanshan@gmail.com&quot;, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;&quot;wshanshan&quot;, &quot;gitlab&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;&quot;shanshan-wang-56590115&quot;, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name><email>wshanshan@gmail.com</email></author><entry><title type="html">Create ASCII art with Python</title><link href="http://localhost:4000/python/asciiart/" rel="alternate" type="text/html" title="Create ASCII art with Python" /><published>2017-08-11T00:00:00-05:00</published><updated>2017-08-11T00:00:00-05:00</updated><id>http://localhost:4000/python/asciiart</id><content type="html" xml:base="http://localhost:4000/python/asciiart/">&lt;p&gt;Printed ASCII art is a fabulous gift for a geeky friend. It’s a stylish decoration that looks great on mugs, t-shirts, and even &lt;a href=&quot;http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/&quot;&gt;curtains&lt;/a&gt;! Making ASCII art is much easier than it looks, and I’m going to show you how!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-16T21:44:45-05:00</updated><id>http://localhost:4000/</id><title type="html">Tinkering</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/sw2.jpg&quot;, &quot;bio&quot;=&gt;&quot;A data interrogator, model tinkerer on the prowl&quot;, &quot;location&quot;=&gt;&quot;Chicago, IL&quot;, &quot;email&quot;=&gt;&quot;wshanshan@gmail.com&quot;, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;&quot;wshanshan&quot;, &quot;gitlab&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;&quot;shanshan-wang-56590115&quot;, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name><email>wshanshan@gmail.com</email></author><entry><title type="html">Create ASCII art with Python</title><link href="http://localhost:4000/python/asciiart/" rel="alternate" type="text/html" title="Create ASCII art with Python" /><published>2017-08-11T00:00:00-05:00</published><updated>2017-08-11T00:00:00-05:00</updated><id>http://localhost:4000/python/asciiart</id><content type="html" xml:base="http://localhost:4000/python/asciiart/">&lt;p&gt;Printed ASCII art is a fabulous gift for a geeky friend. It’s a stylish decoration that looks great on mugs, t-shirts, and even &lt;a href=&quot;http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/&quot;&gt;curtains&lt;/a&gt;! Making ASCII art is much easier than it looks, and I’m going to show you how!&lt;/p&gt;
 
 &lt;p&gt;The great thing about coded artwork is that you can easily &lt;strong&gt;give it your own personal touch&lt;/strong&gt;! To get started, we’ll use a few Python libraries– &lt;a href=&quot;https://pillow.readthedocs.io&quot;&gt;Pillow&lt;/a&gt;, &lt;a href=&quot;https://pypi.python.org/pypi/colour&quot;&gt;Colour&lt;/a&gt; and a little bit of &lt;a href=&quot;https://pypi.python.org/pypi/numpy&quot;&gt;Numpy&lt;/a&gt;. Once you understand how the existing code works, you can change fonts/symbols and try out different colors, to turn your favorite picture into your unique signature artwork.&lt;/p&gt;
 
@@ -49,62 +49,6 @@
 &lt;/figure&gt;
 
 &lt;p&gt;Another thing to notice is that a symbol is much larger than a pixel(px). So it’s not a bad idea to size down the picture before the conversion. Our program handles this using a scaling factor &lt;code class=&quot;highlighter-rouge&quot;&gt;SC&lt;/code&gt; between 0(exclusive) and 1(inclusive). The bigger the number, the more details you would see in the output and the bigger the output image would be. If you want to keep the output of the same pixel size as the input, set &lt;code class=&quot;highlighter-rouge&quot;&gt;SC&lt;/code&gt; to be 1/&lt;code class=&quot;highlighter-rouge&quot;&gt;symbol height in pixels&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;In this project, we are using three libraries Pillow, Colour, Numpy. Pillow handles all the image processing - reading, resizing, writing. Colour gives us the beautiful gradient color. Numpy makes the grayscale conversion easy. You will need to install all these libraries before hands.&lt;/p&gt;
-
-&lt;p&gt;Finally, here are the codes. Explanation are in the comments. Change the input file name in the bottom section and try it with your own image!&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/c825efca4501a491447056849dd207d6.js&quot;&gt; &lt;/script&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/sw2.jpg&quot;, &quot;bio&quot;=&gt;&quot;A data interrogator, model tinkerer on the prowl&quot;, &quot;location&quot;=&gt;&quot;Chicago, IL&quot;, &quot;email&quot;=&gt;&quot;wshanshan@gmail.com&quot;, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;&quot;wshanshan&quot;, &quot;gitlab&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;&quot;shanshan-wang-56590115&quot;, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name><email>wshanshan@gmail.com</email></author><category term="Python" /><category term="ASCII" /><category term="Art" /><category term="Tutorial" /><summary type="html">In this post, I am going to show you how to create ASCII art from an existing picture using Python.</summary></entry><entry><title type="html">Create ASCII art with Python</title><link href="http://localhost:4000/python/asciiart-(copy)/" rel="alternate" type="text/html" title="Create ASCII art with Python" /><published>2017-08-11T00:00:00-05:00</published><updated>2017-08-11T00:00:00-05:00</updated><id>http://localhost:4000/python/asciiart%20(copy)</id><content type="html" xml:base="http://localhost:4000/python/asciiart-(copy)/">&lt;p&gt;Printed ASCII art is a fabulous gift for a geeky friend. It is a stylish decoration. See how it looks &lt;a href=&quot;http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/&quot;&gt;printed on curtain&lt;/a&gt;! It will look good on mugs, T-shirts, …&lt;/p&gt;
-
-&lt;p&gt;The great thing about coded artwork is that you can easily change the code to &lt;strong&gt;give it your personal touch&lt;/strong&gt;! Here I will introduce the basic flow. We will use a few Python libraries– &lt;a href=&quot;https://pillow.readthedocs.io&quot;&gt;Pillow&lt;/a&gt;, &lt;a href=&quot;https://pypi.python.org/pypi/colour&quot;&gt;Colour&lt;/a&gt; and a little bit &lt;a href=&quot;https://pypi.python.org/pypi/numpy&quot;&gt;Numpy&lt;/a&gt;. Once you understand how the existing code works, you can then change fonts/symbols, try different colors, to turn your favorite picture into your unique signature artwork.&lt;/p&gt;
-
-&lt;figure class=&quot;third &quot;&gt;
-  
-    
-      &lt;a href=&quot;http://localhost:4000/assets/images/asciiart/IQaH96.jpeg&quot; title=&quot;Input image&quot;&gt;
-        &lt;img src=&quot;http://localhost:4000/assets/images/asciiart/IQaH96.jpeg&quot; alt=&quot;Input image&quot; /&gt;
-      &lt;/a&gt;
-    
-  
-    
-      &lt;a href=&quot;http://localhost:4000/assets/images/asciiart/results.png&quot; title=&quot;Output image example 1. SC=1,GCF=2, gradient color blue to pink&quot;&gt;
-        &lt;img src=&quot;http://localhost:4000/assets/images/asciiart/results.png&quot; alt=&quot;Output image example 1.  SC=1,GCF=2,gradient color black to blue&quot; /&gt;
-      &lt;/a&gt;
-    
-  
-    
-      &lt;a href=&quot;http://localhost:4000/assets/images/asciiart/results_pink.png&quot; title=&quot;Output image example 2. SC=1,GCF=2, gradient color blue to pink&quot;&gt;
-        &lt;img src=&quot;http://localhost:4000/assets/images/asciiart/results_pink.png&quot; alt=&quot;Output image example 2. SC=1,GCF=2, gradient color blue to pink&quot; /&gt;
-      &lt;/a&gt;
-    
-  
-  
-    &lt;figcaption&gt;Examples:(from left to right) Input , Output1:gradient color black to blue , Output2: gradient color blue to pink
-&lt;/figcaption&gt;
-  
-&lt;/figure&gt;
-
-&lt;p&gt;The first thing to know is that in ascii art pixels are symbols. Symbols naturally have different degrees of darkness because of their shapes. For example, &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt; is whiter than &lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt; is whiter than &lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt;. Therefore, we can show a range of grayscale using different symbols.&lt;/p&gt;
-
-&lt;figure class=&quot;third&quot;&gt;
-  &lt;img src=&quot;http://localhost:4000/assets/images/asciiart/demo1.png&quot; alt=&quot;symbol block demo1&quot; /&gt;
-  
-    &lt;figcaption&gt;4x4 symbol blocks
-&lt;/figcaption&gt;
-  
-&lt;/figure&gt;
-
-&lt;p&gt;One challenge as you can see from above is that symbols are not square. If we simply replace pixels in an image with symbols one for one, we will get a picture with distorted width and height. To avoid that, we need to calculate the number of symbols to use based on symbol width/height ratio. For example, if the symbol we use is 3:4 on the width and height, the number of symbols on the columns and rows need to be 4:3 to fill a square space.&lt;/p&gt;
-
-&lt;figure class=&quot;third&quot;&gt;
-  &lt;img src=&quot;http://localhost:4000/assets/images/asciiart/demo2.png&quot; alt=&quot;symbol block demo2&quot; /&gt;
-  
-    &lt;figcaption&gt;Now these patches look more square
-&lt;/figcaption&gt;
-  
-&lt;/figure&gt;
-
-&lt;p&gt;Another thing to notice is that one symbol is much larger than one pixel(px). So it’s not a bad idea to size down the picture before the conversion. Our program handles it using a parameter &lt;code class=&quot;highlighter-rouge&quot;&gt;SC&lt;/code&gt;, scaling factor. It’s between 0(exclusive) and 1(inclusive). The bigger the number, the more details you would see in the output and the bigger the output image would be. If you want to keep the output of the same pixel size as the input, set &lt;code class=&quot;highlighter-rouge&quot;&gt;SC&lt;/code&gt; to be 1/&lt;code class=&quot;highlighter-rouge&quot;&gt;symbol width in pixels&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;In this project, we are using three libraries Pillow, Colour, Numpy. Pillow handles all the image processing - reading, resizing, writing. Colour gives us the beautiful gradient color. Numpy makes the grayscale conversion easy. You will need to install all these libraries before hands.&lt;/p&gt;
 
