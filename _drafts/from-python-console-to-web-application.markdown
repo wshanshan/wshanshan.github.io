@@ -1,7 +1,7 @@
 ---
 title:  "Convert a Console Python Application to a Web Application"
-categories: tutorial
-tags: Flask Bootstrap AWS
+categories: Python 
+tags: Flask Bootstrap AWS tutorial
 ---
 
 {% include toc icon="gears" title="Table of Contents" %}

@@ -1,6 +1,6 @@
 ---
 title:  "Create ASCII art with Python"
-categories: Coding4Art
+categories: Python
 tags: Python ASCII Art Tutorial
 gallery:
   - url: /assets/images/asciiart/IQaH96.jpeg
@@ -15,29 +15,30 @@ gallery:
     image_path: /assets/images/asciiart/results_pink.png
     alt: "Output image example 2. SC=1,GCF=2, gradient color blue to pink"
     title: "Output image example 2. SC=1,GCF=2, gradient color blue to pink"
+excerpt: In this post, I am going to show you how to create ASCII art from an existing picture using Python. 
+
 ---
 
-In this post, I am going to show you how to create ASCII art from an existing picture using Python. You can use any picture as long as it has good contrast in brightness. 
 
-Printed ASCII art is a fabulous gift for a geeky friend. It is a stylish decoration. See how it looks [printed on curtain](http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/)! It will look good on mugs, T-shirts, ... 
+Printed ASCII art is a fabulous gift for a geeky friend. It's a stylish decoration that looks great on mugs, t-shirts, and even [curtains](http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/)! Making ASCII art is much easier than it looks, and I'm going to show you how!
 
-The great thing about coded artwork is that you can easily change the code to **give it your personal touch**! Here I will introduce the basic flow. We will use a few Python libraries-- [Pillow](https://pillow.readthedocs.io), [Colour](https://pypi.python.org/pypi/colour) and a little bit [Numpy](https://pypi.python.org/pypi/numpy). Once you understand how the existing code works, you can then change fonts/symbols, try different colors, to turn your favorite picture into your unique signature artwork. 
+The great thing about coded artwork is that you can easily **give it your own personal touch**! To get started, we'll use a few Python libraries-- [Pillow](https://pillow.readthedocs.io), [Colour](https://pypi.python.org/pypi/colour) and a little bit of [Numpy](https://pypi.python.org/pypi/numpy). Once you understand how the existing code works, you can change fonts/symbols and try out different colors, to turn your favorite picture into your unique signature artwork. 
 
 {% include gallery caption="Examples:(from left to right) Input , Output1:gradient color black to blue , Output2: gradient color blue to pink" %}
 
-The first thing to know is that in ascii art pixels are symbols. Symbols naturally have different degrees of darkness because of their shapes. For example, `.` is whiter than `:`, `:` is whiter than `!`. Therefore, we can show a range of grayscale using different symbols.
+The first thing to know is that in ASCII art pixels are symbols. Symbols naturally have different degrees of darkness because of their shapes. For example, `.` is whiter than `:` which is whiter than `!`. So, we can show a range of grayscale using different symbols.
 
 {% include figure image_path="/assets/images/asciiart/demo1.png" alt="symbol block demo1" caption ="4x4 symbol blocks" %}{: .third}
 
-One challenge as you can see from above is that symbols are not square. If we simply replace pixels in an image with symbols one for one, we will get a picture with distorted width and height. To avoid that, we need to calculate the number of symbols to use based on symbol width/height ratio. For example, if the symbol we use is 3:4 on the width and height, the number of symbols on the columns and rows need to be 4:3 to fill a square space. 
+One challenge as you can see from above is that symbols are not square. If we simply replace pixels in an image with symbols one-to-one, we will get a picture with distorted width and height. To avoid this, we need to calculate the how many symbols to use in each row and column based on symbol width/height ratio. For example, if the symbol we use is 3:4 on the width and height, the number of symbols on the columns and rows need to be 4:3 to fill a square. 
 
 {% include figure image_path="/assets/images/asciiart/demo2.png" alt="symbol block demo2" caption ="Now these patches look more square" %}{: .third}
 
-Another thing to notice is that one symbol is much larger than one pixel(px). So it's not a bad idea to size down the picture before the conversion. Our program handles it using a parameter `SC`, scaling factor. It's between 0(exclusive) and 1(inclusive). The bigger the number, the more details you would see in the output and the bigger the output image would be. If you want to keep the output of the same pixel size as the input, set `SC` to be 1/`symbol width in pixels`. 
+Another thing to notice is that a symbol is much larger than a pixel(px). So it's not a bad idea to size down the picture before the conversion. Our program handles this using a scaling factor `SC` between 0(exclusive) and 1(inclusive). The bigger the number, the more details you would see in the output and the bigger the output image would be. If you want to keep the output of the same pixel size as the input, set `SC` to be 1/`symbol height in pixels`. 
 
 In this project, we are using three libraries Pillow, Colour, Numpy. Pillow handles all the image processing - reading, resizing, writing. Colour gives us the beautiful gradient color. Numpy makes the grayscale conversion easy. You will need to install all these libraries before hands. 
 
-Finally, here are the codes. Explanation are in the comments. Change the input file name and try it with your own image!
+Finally, here are the codes. Explanation are in the comments. Change the input file name in the bottom section and try it with your own image!
 
 {% gist c825efca4501a491447056849dd207d6 %}
 

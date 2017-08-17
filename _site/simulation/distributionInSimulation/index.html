@@ -19,12 +19,12 @@
 
 
 
-<title>Create ASCII art with Python - Tinkering</title>
+<title>When mean and standard deviation are enough - Tinkering</title>
 
 
 
 
-<meta name="description" content="In this post, I am going to show you how to create ASCII art from an existing picture using Python. You can use any picture as long as it has good contrast in brightness.">
+<meta name="description" content="There is a recent post on reddit that shows that data could be vastly different even they can have the same mean and standard deviation. It quickly got more than 5K upvotes and 200 comments. For the least, it speaks to the pain point of many statisticians, data scientists who struggles to convince people that ‘simple-minded’ approach such as box plots is not sufficient.">
 
 
 
@@ -33,15 +33,15 @@
 
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="Tinkering">
-<meta property="og:title" content="Create ASCII art with Python">
+<meta property="og:title" content="When mean and standard deviation are enough">
 
 
-  <link rel="canonical" href="http://localhost:4000/coding4art/asciiart/">
-  <meta property="og:url" content="http://localhost:4000/coding4art/asciiart/">
+  <link rel="canonical" href="http://localhost:4000/simulation/distributionInSimulation/">
+  <meta property="og:url" content="http://localhost:4000/simulation/distributionInSimulation/">
 
 
 
-  <meta property="og:description" content="In this post, I am going to show you how to create ASCII art from an existing picture using Python. You can use any picture as long as it has good contrast in brightness.">
+  <meta property="og:description" content="There is a recent post on reddit that shows that data could be vastly different even they can have the same mean and standard deviation. It quickly got more than 5K upvotes and 200 comments. For the least, it speaks to the pain point of many statisticians, data scientists who struggles to convince people that ‘simple-minded’ approach such as box plots is not sufficient.">
 
 
 
@@ -56,7 +56,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-08-11T00:00:00-05:00">
+  <meta property="article:published_time" content="2017-08-16T20:35:26-05:00">
 
 
 
@@ -274,15 +274,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Create ASCII art with Python">
-    <meta itemprop="description" content="In this post, I am going to show you how to create ASCII art from an existing picture using Python. You can use any picture as long as it has good contrast in brightness.">
-    <meta itemprop="datePublished" content="August 11, 2017">
+    <meta itemprop="headline" content="When mean and standard deviation are enough">
+    <meta itemprop="description" content="There is a recent post on reddit that shows that data could be vastly different even they can have the same mean and standard deviation. It quickly got more than 5K upvotes and 200 comments. For the least, it speaks to the pain point of many statisticians, data scientists who struggles to convince people that ‘simple-minded’ approach such as box plots is not sufficient.">
+    <meta itemprop="datePublished" content="August 16, 2017">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Create ASCII art with Python
+          <h1 class="page__title" itemprop="headline">When mean and standard deviation are enough
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
@@ -297,65 +297,26 @@
       
 
       <section class="page__content" itemprop="text">
-        <p>In this post, I am going to show you how to create ASCII art from an existing picture using Python. You can use any picture as long as it has good contrast in brightness.</p>
+        <p>There is a recent post on reddit that shows that <a href="https://www.reddit.com/r/dataisbeautiful/comments/6ssmzc/be_wary_of_boxplots_they_could_be_hiding/">data could be vastly different even they can have the same mean and standard deviation</a>. It quickly got more than 5K upvotes and 200 comments. For the least, it speaks to the pain point of many statisticians, data scientists who struggles to convince people that ‘simple-minded’ approach such as box plots is not sufficient.</p>
 
-<p>Printed ASCII art is a fabulous gift for a geeky friend. It is a stylish decoration. See how it looks <a href="http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/">printed on curtain</a>! It will look good on mugs, T-shirts, …</p>
+<p>I was one of them. New out of school. Trying so hard to explain distribution tails, skewness, multi-modals to people in the manufacturing plant who are comfortably living in the six-sigma world all about mu and sigma. However, I found that <strong>in some models, mean and standard deviations are enough</strong>. In this post, I’m going to show you such an example.</p>
 
-<p>The great thing about coded artwork is that you can easily change the code to <strong>give it your personal touch</strong>! Here I will introduce the basic flow. We will use a few Python libraries– <a href="https://pillow.readthedocs.io">Pillow</a>, <a href="https://pypi.python.org/pypi/colour">Colour</a> and a little bit <a href="https://pypi.python.org/pypi/numpy">Numpy</a>. Once you understand how the existing code works, you can then change fonts/symbols, try different colors, to turn your favorite picture into your unique signature artwork.</p>
+<p>Consider a simple case. We have one machine and observe that jobs arrives in Possion distribution, in averge 1 job every 6 hours. The time the machine needs to complete a job varies. We want to decide whether we need to add another machine to keep total cycle time (including queue time) under 8 hours.</p>
 
-<figure class="third ">
-  
-    
-      <a href="http://localhost:4000/assets/images/asciiart/IQaH96.jpeg" title="Input image">
-        <img src="http://localhost:4000/assets/images/asciiart/IQaH96.jpeg" alt="Input image" />
-      </a>
-    
-  
-    
-      <a href="http://localhost:4000/assets/images/asciiart/results.png" title="Output image example 1. SC=1,GCF=2, gradient color blue to pink">
-        <img src="http://localhost:4000/assets/images/asciiart/results.png" alt="Output image example 1.  SC=1,GCF=2,gradient color black to blue" />
-      </a>
-    
-  
-    
-      <a href="http://localhost:4000/assets/images/asciiart/results_pink.png" title="Output image example 2. SC=1,GCF=2, gradient color blue to pink">
-        <img src="http://localhost:4000/assets/images/asciiart/results_pink.png" alt="Output image example 2. SC=1,GCF=2, gradient color blue to pink" />
-      </a>
-    
-  
-  
-    <figcaption>Examples:(from left to right) Input , Output1:gradient color black to blue , Output2: gradient color blue to pink
-</figcaption>
-  
-</figure>
+<p>Assume we have tons of data of service times. The question for modeler/analyst is, how much data analysis is needed here? Does the pattern in the time matter? Does the shape of distribution matter? Through simple statistical summary, we know that the service takes 4 hours in average, 1.732 as standard deviation. Does the real distribution matters?</p>
 
-<p>The first thing to know is that in ascii art pixels are symbols. Symbols naturally have different degrees of darkness because of their shapes. For example, <code class="highlighter-rouge">.</code> is whiter than <code class="highlighter-rouge">:</code>, <code class="highlighter-rouge">:</code> is whiter than <code class="highlighter-rouge">!</code>. Therefore, we can show a range of grayscale using different symbols.</p>
+<p>We’ll use the simulation to answer this question:</p>
 
-<figure class="third">
-  <img src="http://localhost:4000/assets/images/asciiart/demo1.png" alt="symbol block demo1" />
-  
-    <figcaption>4x4 symbol blocks
-</figcaption>
-  
-</figure>
+<p>Now you may be shake your heads in disbelief. Why is it? The simple case of xxx will give you some hints. It turns out, in a M/G/1 model, that the E(T) and E(N) are functions of first two modes of S and V(T), V(N) are fuctions of first three modes.</p>
 
-<p>One challenge as you can see from above is that symbols are not square. If we simply replace pixels in an image with symbols one for one, we will get a picture with distorted width and height. To avoid that, we need to calculate the number of symbols to use based on symbol width/height ratio. For example, if the symbol we use is 3:4 on the width and height, the number of symbols on the columns and rows need to be 4:3 to fill a square space.</p>
+<p>Implications: it means that if we are use the first two modes of leadtime or buffer as goal metrics, we will get the same optimal number!</p>
 
-<figure class="third">
-  <img src="http://localhost:4000/assets/images/asciiart/demo2.png" alt="symbol block demo2" />
-  
-    <figcaption>Now these patches look more square
-</figcaption>
-  
-</figure>
+<p>Derived distribution 
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-436j-fundamentals-of-probability-fall-2008/lecture-notes/MIT6_436JF08_lec10.pdf</p>
 
-<p>Another thing to notice is that one symbol is much larger than one pixel(px). So it’s not a bad idea to size down the picture before the conversion. Our program handles it using a parameter <code class="highlighter-rouge">SC</code>, scaling factor. It’s between 0(exclusive) and 1(inclusive). The bigger the number, the more details you would see in the output and the bigger the output image would be. If you want to keep the output of the same pixel size as the input, set <code class="highlighter-rouge">SC</code> to be 1/<code class="highlighter-rouge">symbol width in pixels</code>.</p>
+<p>click <a href="https://cloud.anylogic.com/#/model/a17b5bbe-7c9d-4460-9be7-15c9820ebec0;mode=SETTINGS">simulation model</a></p>
 
-<p>In this project, we are using three libraries Pillow, Colour, Numpy. Pillow handles all the image processing - reading, resizing, writing. Colour gives us the beautiful gradient color. Numpy makes the grayscale conversion easy. You will need to install all these libraries before hands.</p>
-
-<p>Finally, here are the codes. Explanation are in the comments. Change the input file name and try it with your own image!</p>
-
-<script src="https://gist.github.com/c825efca4501a491447056849dd207d6.js"> </script>
+<p>I wished I have known this earlier to save hours and hours trying to get the most accurate data and fitting the perfect distribution.</p>
 
 
         
@@ -364,37 +325,6 @@
       <footer class="page__meta">
         
         
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="http://localhost:4000/tags/#art" class="page__taxonomy-item" rel="tag">Art</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#ascii" class="page__taxonomy-item" rel="tag">ASCII</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#python" class="page__taxonomy-item" rel="tag">Python</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#tutorial" class="page__taxonomy-item" rel="tag">Tutorial</a>
-    
-    </span>
-  </p>
-
-
 
 
   
@@ -410,14 +340,14 @@
     
       
       
-      <a href="http://localhost:4000/categories/#coding4art" class="page__taxonomy-item" rel="tag">Coding4Art</a>
+      <a href="http://localhost:4000/categories/#simulation" class="page__taxonomy-item" rel="tag">Simulation</a>
     
     </span>
   </p>
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-08-11T00:00:00-05:00">August 11, 2017</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-08-16T20:35:26-05:00">August 16, 2017</time></p>
         
       </footer>
 
@@ -426,20 +356,20 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Create ASCII art with Python http://localhost:4000/coding4art/asciiart/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=When mean and standard deviation are enough http://localhost:4000/simulation/distributionInSimulation/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/coding4art/asciiart/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/simulation/distributionInSimulation/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=http://localhost:4000/coding4art/asciiart/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+  <a href="https://plus.google.com/share?url=http://localhost:4000/simulation/distributionInSimulation/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/coding4art/asciiart/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/simulation/distributionInSimulation/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="http://localhost:4000/datadoesnotlie/Chicago-Daycare/" class="pagination--pager" title="Why can’t I find a daycare
+      <a href="http://localhost:4000/python/from-python-console-to-web-application/" class="pagination--pager" title="Convert a Console Python Application to a Web Application
 ">Previous</a>
     
     
@@ -465,6 +395,93 @@
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/python/from-python-console-to-web-application/" rel="permalink">Convert a Console Python Application to a Web Application
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+     Table of Contents
+
+  
+
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/python/asciiart/" rel="permalink">Create ASCII art with Python
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">In this post, I am going to show you how to create ASCII art from an existing picture using Python.
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/python/asciiart-(copy)/" rel="permalink">Create ASCII art with Python
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">In this post, I am going to show you how to create ASCII art from an existing picture using Python.
+</p>
+  </article>
+</div>
         
           
 

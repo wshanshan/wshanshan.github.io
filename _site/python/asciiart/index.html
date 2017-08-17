@@ -19,12 +19,12 @@
 
 
 
-<title>Why can’t I find a daycare - Tinkering</title>
+<title>Create ASCII art with Python - Tinkering</title>
 
 
 
 
-<meta name="description" content="Location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census.">
+<meta name="description" content="In this post, I am going to show you how to create ASCII art from an existing picture using Python.">
 
 
 
@@ -33,15 +33,15 @@
 
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="Tinkering">
-<meta property="og:title" content="Why can’t I find a daycare">
+<meta property="og:title" content="Create ASCII art with Python">
 
 
-  <link rel="canonical" href="http://localhost:4000/datadoesnotlie/Chicago-Daycare/">
-  <meta property="og:url" content="http://localhost:4000/datadoesnotlie/Chicago-Daycare/">
+  <link rel="canonical" href="http://localhost:4000/python/asciiart/">
+  <meta property="og:url" content="http://localhost:4000/python/asciiart/">
 
 
 
-  <meta property="og:description" content="Location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census.">
+  <meta property="og:description" content="In this post, I am going to show you how to create ASCII art from an existing picture using Python.">
 
 
 
@@ -56,7 +56,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-08-01T00:00:00-05:00">
+  <meta property="article:published_time" content="2017-08-11T00:00:00-05:00">
 
 
 
@@ -274,15 +274,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Why can’t I find a daycare">
-    <meta itemprop="description" content="Location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census.">
-    <meta itemprop="datePublished" content="August 01, 2017">
+    <meta itemprop="headline" content="Create ASCII art with Python">
+    <meta itemprop="description" content="In this post, I am going to show you how to create ASCII art from an existing picture using Python.">
+    <meta itemprop="datePublished" content="August 11, 2017">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Why can’t I find a daycare
+          <h1 class="page__title" itemprop="headline">Create ASCII art with Python
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
@@ -290,108 +290,70 @@
 
 
 
-  3 minute read
+  2 minute read
 </p>
           
         </header>
       
 
       <section class="page__content" itemprop="text">
-        <p>When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families - Lake View, Chicago. It is <a href="https://gist.github.com/wshanshan/e150855f7b09bebc9b1064e30e55a071">2nd in population</a> among Chicago’s 77 communities.</p>
+        <p>Printed ASCII art is a fabulous gift for a geeky friend. It’s a stylish decoration that looks great on mugs, t-shirts, and even <a href="http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/">curtains</a>! Making ASCII art is much easier than it looks, and I’m going to show you how!</p>
 
-<p>I didn’t ask much about daycares (I thought…). Besides the basics, I only have one simple wish: walking distance to home. But after months of searching, I couldn’t find any available spot. I finally gave up but couldn’t stop wondering: Is it only my bad luck or does everyone have the same problem?</p>
+<p>The great thing about coded artwork is that you can easily <strong>give it your own personal touch</strong>! To get started, we’ll use a few Python libraries– <a href="https://pillow.readthedocs.io">Pillow</a>, <a href="https://pypi.python.org/pypi/colour">Colour</a> and a little bit of <a href="https://pypi.python.org/pypi/numpy">Numpy</a>. Once you understand how the existing code works, you can change fonts/symbols and try out different colors, to turn your favorite picture into your unique signature artwork.</p>
 
-<p>So I went to the <a href="https://sunshine.dcfs.illinois.gov/Content/Licensing/Daycare/ProviderLookup.aspx">government website</a>, downloaded the data of all the licensed daycare providers, queried their geolocations from Google Geocoding API, and put them on a map. The findings are interesting.</p>
-
-<h2 id="basics-of-chicago-daycares">Basics of Chicago Daycares</h2>
-
-<p>Chicago has a lot of daycares ~ 2500. It’s 25% of Illnois’s total counts. Considering Chicago has 21% of state population (2.705 million in 12.8 million, 2016 US Census estimates), it’s reasonable.</p>
-
-<figure class="align-right">
-  <img src="http://localhost:4000/assets/images/chicagoDaycares/pie_countsByType.png" alt="Illinois childcare counts by type" />
+<figure class="third ">
   
-</figure>
-<figure class="align-right">
-  <img src="http://localhost:4000/assets/images/chicagoDaycares/pie_capacityByType.png" alt="Illinois childcare capacity by type" />
+    
+      <a href="http://localhost:4000/assets/images/asciiart/IQaH96.jpeg" title="Input image">
+        <img src="http://localhost:4000/assets/images/asciiart/IQaH96.jpeg" alt="Input image" />
+      </a>
+    
   
-</figure>
-
-<p>There are three types of licensed childcare providers: <em>daycare centers</em>, <em>home daycares</em>, and <em>group home daycares</em>. <em>Home daycares</em> and <em>group daycares</em> are usually small operations at someone’s home. Limited by their <a href="http://ccrs.illinois.edu/providers/licensing.html">licenses</a>, they can care for up to 8 to 16 kids. <em>Daycare centers</em> are much bigger. The average capacity is around ~ 70. Some large ones have capacity greater than 300.</p>
-
-<p>Most of the childcare providers in Illinois are either home daycares or group home daycares (~71%). Nevertheless, daycare centers provide ~74% of total capacity.</p>
-
-<h2 id="location-location-location">Location, Location, Location</h2>
-
-<p>What’s interesting about different types of daycares are their locations. As shown in the map below, home-based daycares are clustered in west and south Chicago communities, while daycare centers dominate central and north sides.</p>
-
-<figure class="align-center">
-  <img src="http://localhost:4000/assets/images/chicagoDaycares/scatterplot_locations.png" alt="Chicago daycare locations" />
+    
+      <a href="http://localhost:4000/assets/images/asciiart/results.png" title="Output image example 1. SC=1,GCF=2, gradient color blue to pink">
+        <img src="http://localhost:4000/assets/images/asciiart/results.png" alt="Output image example 1.  SC=1,GCF=2,gradient color black to blue" />
+      </a>
+    
   
-</figure>
-
-<p>Why is it happening? Maybe people living in central and north sides don’t like the idea of opening daycares in their homes. Maybe there are less apartment/houses in those areas appropriate for home daycares. Maybe people in these communities generally prefer daycare centers, so there is not enough demand for home-based daycares. Maybe it’s a mix of all above.</p>
-
-<p>The consequence is apparent. In the communities where only big centers prevail, providers are relatively farther away from each other because of their large capacities, leaving patches of ‘empty’ space on the map.</p>
-
-<p>Unfortunately, my home is in such an empty spot, which makes it difficult to find a daycare within walking distance. ᕙ(⇀‸↼‶)ᕗ</p>
-
-<h2 id="capacity">Capacity</h2>
-
-<p>What makes things even trickier is the capacity. Although Lake View is one of the top 10 communities having the highest daycare capacity per square feet, it’s low on capacity by person. So among the only 2 daycares in my walking distance (even though I’m willing to walk 20 minutes one way), both have unrealistically long waiting lists.</p>
-
-<figure class="align-right">
-  <img src="http://localhost:4000/assets/images/chicagoDaycares/communityByCapacityDensity.png" alt="Chicago community colormap - daycare capacity density" />
+    
+      <a href="http://localhost:4000/assets/images/asciiart/results_pink.png" title="Output image example 2. SC=1,GCF=2, gradient color blue to pink">
+        <img src="http://localhost:4000/assets/images/asciiart/results_pink.png" alt="Output image example 2. SC=1,GCF=2, gradient color blue to pink" />
+      </a>
+    
+  
+  
+    <figcaption>Examples:(from left to right) Input , Output1:gradient color black to blue , Output2: gradient color blue to pink
+</figcaption>
   
 </figure>
 
-<p>Top 10 Chicago communities rank by daycare capacity per square feet:</p>
+<p>The first thing to know is that in ASCII art pixels are symbols. Symbols naturally have different degrees of darkness because of their shapes. For example, <code class="highlighter-rouge">.</code> is whiter than <code class="highlighter-rouge">:</code> which is whiter than <code class="highlighter-rouge">!</code>. So, we can show a range of grayscale using different symbols.</p>
 
-<ol class="small">
-  <li>ARMOUR SQUARE</li>
-  <li>NEAR NORTH SIDE</li>
-  <li>LINCOLN PARK</li>
-  <li>LOGAN SQUARE</li>
-  <li>UPTOWN</li>
-  <li>GREATER GRAND CROSSING</li>
-  <li>LAKE VIEW</li>
-  <li>NEAR SOUTH SIDE</li>
-  <li>WASHINGTON HEIGHTS</li>
-  <li>HUMBOLDT PARK</li>
-</ol>
-
-<figure class="full"></figure>
-
-<figure class="align-right">
-  <img src="http://localhost:4000/assets/images/chicagoDaycares/communityByCapacityPerPerson.png" alt="Chicago community colormap - daycare capacity by person" />
+<figure class="third">
+  <img src="http://localhost:4000/assets/images/asciiart/demo1.png" alt="symbol block demo1" />
+  
+    <figcaption>4x4 symbol blocks
+</figcaption>
   
 </figure>
 
-<p>Top 10 Chicago communities rank by capacity per person:</p>
+<p>One challenge as you can see from above is that symbols are not square. If we simply replace pixels in an image with symbols one-to-one, we will get a picture with distorted width and height. To avoid this, we need to calculate the how many symbols to use in each row and column based on symbol width/height ratio. For example, if the symbol we use is 3:4 on the width and height, the number of symbols on the columns and rows need to be 4:3 to fill a square.</p>
 
-<ol class="small">
-  <li>AUSTIN</li>
-  <li>AUBURN GRESHAM</li>
-  <li>CHICAGO LAWN</li>
-  <li>WASHINGTON HEIGHTS</li>
-  <li>AVALON PARK</li>
-  <li>WEST GARFIELD PARK</li>
-  <li>SOUTH SHORE</li>
-  <li>CHATHAM</li>
-  <li>BELMONT CRAGIN</li>
-  <li>GREATER GRAND CROSSING</li>
-</ol>
+<figure class="third">
+  <img src="http://localhost:4000/assets/images/asciiart/demo2.png" alt="symbol block demo2" />
+  
+    <figcaption>Now these patches look more square
+</figcaption>
+  
+</figure>
 
-<h2 id="on-a-final-note">On a final note</h2>
+<p>Another thing to notice is that a symbol is much larger than a pixel(px). So it’s not a bad idea to size down the picture before the conversion. Our program handles this using a scaling factor <code class="highlighter-rouge">SC</code> between 0(exclusive) and 1(inclusive). The bigger the number, the more details you would see in the output and the bigger the output image would be. If you want to keep the output of the same pixel size as the input, set <code class="highlighter-rouge">SC</code> to be 1/<code class="highlighter-rouge">symbol height in pixels</code>.</p>
 
-<p>The data analysis perfectly explains my experience.</p>
+<p>In this project, we are using three libraries Pillow, Colour, Numpy. Pillow handles all the image processing - reading, resizing, writing. Colour gives us the beautiful gradient color. Numpy makes the grayscale conversion easy. You will need to install all these libraries before hands.</p>
 
-<p>Now I drive my son to daycare everyday. I like the daycare but still don’t like the driving. But at least I know that I’m only one of many.</p>
+<p>Finally, here are the codes. Explanation are in the comments. Change the input file name in the bottom section and try it with your own image!</p>
 
-<p>If you happen to thinking about opening a daycare, come to my neighborhood! Your business will boom here!</p>
-
-<h2 id="technical-notes">Technical notes</h2>
-
-<p>I use Python <a href="http://geopandas.org/">Geopandas</a> to make the charts. Here is the gist if you are interested: <a href="https://gist.github.com/wshanshan/e150855f7b09bebc9b1064e30e55a071">chicagoDaycares.ipynb</a></p>
+<script src="https://gist.github.com/c825efca4501a491447056849dd207d6.js"> </script>
 
 
         
@@ -413,27 +375,19 @@
     
       
       
-      <a href="http://localhost:4000/tags/#chicago" class="page__taxonomy-item" rel="tag">Chicago</a><span class="sep">, </span>
+      <a href="http://localhost:4000/tags/#art" class="page__taxonomy-item" rel="tag">Art</a><span class="sep">, </span>
     
       
       
-      <a href="http://localhost:4000/tags/#daycare" class="page__taxonomy-item" rel="tag">daycare</a><span class="sep">, </span>
+      <a href="http://localhost:4000/tags/#ascii" class="page__taxonomy-item" rel="tag">ASCII</a><span class="sep">, </span>
     
       
       
-      <a href="http://localhost:4000/tags/#geopandas" class="page__taxonomy-item" rel="tag">geopandas</a><span class="sep">, </span>
+      <a href="http://localhost:4000/tags/#python" class="page__taxonomy-item" rel="tag">Python</a><span class="sep">, </span>
     
       
       
-      <a href="http://localhost:4000/tags/#map" class="page__taxonomy-item" rel="tag">map</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#opendata" class="page__taxonomy-item" rel="tag">openData</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#python" class="page__taxonomy-item" rel="tag">Python</a>
+      <a href="http://localhost:4000/tags/#tutorial" class="page__taxonomy-item" rel="tag">Tutorial</a>
     
     </span>
   </p>
@@ -454,14 +408,14 @@
     
       
       
-      <a href="http://localhost:4000/categories/#datadoesnotlie" class="page__taxonomy-item" rel="tag">DataDoesNotLie</a>
+      <a href="http://localhost:4000/categories/#python" class="page__taxonomy-item" rel="tag">Python</a>
     
     </span>
   </p>
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-08-01T00:00:00-05:00">August 01, 2017</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-08-11T00:00:00-05:00">August 11, 2017</time></p>
         
       </footer>
 
@@ -470,23 +424,24 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Why can't I find a daycare http://localhost:4000/datadoesnotlie/Chicago-Daycare/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Create ASCII art with Python http://localhost:4000/python/asciiart/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/datadoesnotlie/Chicago-Daycare/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/python/asciiart/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=http://localhost:4000/datadoesnotlie/Chicago-Daycare/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+  <a href="https://plus.google.com/share?url=http://localhost:4000/python/asciiart/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/datadoesnotlie/Chicago-Daycare/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/python/asciiart/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="#" class="pagination--pager disabled">Previous</a>
-    
-    
       <a href="http://localhost:4000/python/asciiart-(copy)/" class="pagination--pager" title="Create ASCII art with Python
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/python/from-python-console-to-web-application/" class="pagination--pager" title="Convert a Console Python Application to a Web Application
 ">Next</a>
     
   </nav>
@@ -578,7 +533,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/python/asciiart/" rel="permalink">Create ASCII art with Python
+        <a href="http://localhost:4000/python/asciiart-(copy)/" rel="permalink">Create ASCII art with Python
 </a>
       
     </h2>
@@ -605,7 +560,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/python/asciiart-(copy)/" rel="permalink">Create ASCII art with Python
+        <a href="http://localhost:4000/datadoesnotlie/Chicago-Daycare/" rel="permalink">Why can’t I find a daycare
 </a>
       
     </h2>
@@ -615,10 +570,10 @@
 
 
 
-  2 minute read
+  3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">In this post, I am going to show you how to create ASCII art from an existing picture using Python.
+    <p class="archive__item-excerpt" itemprop="description">Location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census.
 </p>
   </article>
 </div>
