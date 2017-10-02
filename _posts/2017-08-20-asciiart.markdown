@@ -1,0 +1,143 @@
+---
+title:  "Convert Photos to ASCII Arts with Python"
+categories: Python
+tags: Python ASCII Art Tutorial
+gallery:
+  - url: /assets/images/asciiart/IQaH96.jpeg
+    image_path: /assets/images/asciiart/IQaH96.jpeg
+    alt: "Input image"
+    title: "Input image"
+  - url: /assets/images/asciiart/results.png
+    image_path: /assets/images/asciiart/results.png
+    alt: "Output image example 1.  SC=1,GCF=2,gradient color black to blue"
+    title: "Output image example 1. SC=1,GCF=2, gradient color blue to pink"
+  - url: /assets/images/asciiart/results_pink.png
+    image_path: /assets/images/asciiart/results_pink.png
+    alt: "Output image example 2. SC=1,GCF=2, gradient color blue to pink"
+    title: "Output image example 2. SC=1,GCF=2, gradient color blue to pink"
+excerpt: This post shows you how to create ASCII art from an existing picture using Python. 
+
+---
+
+
+Printed ASCII art is a fabulous gift for a geeky friend. It’s a stylish decoration that looks great on mugs, t-shirts, and even [curtains](http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/)! Making ASCII art is much easier than it looks, and I'm going to show you how to do it in Python!
+
+The great thing about coded artwork is that you can easily **give it your own personal touch**! We'll use a few Python libraries-- [Pillow](https://pillow.readthedocs.io), [Colour](https://pypi.python.org/pypi/colour) and a little bit of [Numpy](https://pypi.python.org/pypi/numpy). Pillow handles all the image processing - reading, resizing, writing. Colour gives us the beautiful gradient color. Numpy makes the grayscale conversion easy. Once you understand how the existing code works, you can change fonts/symbols and try out different colors, to turn your favorite picture into your unique signature artwork. 
+
+{% include gallery caption="Examples:(from left to right) Input , Output1:gradient color black to blue , Output2: gradient color blue to pink" %}
+
+Prerequisits: Install Python 3 and libraries [Pillow](https://pillow.readthedocs.io), [Colour](https://pypi.python.org/pypi/colour) and [Numpy](https://pypi.python.org/pypi/numpy)
+
+Step 1: load a picture
+
+The Image class in PIL (Pillow) provides a lazy function `Image.open` to open an image file. At this step, we only identify the image but not actually load it into memory. `Image` supports a variety of [image types](http://pillow.readthedocs.io/en/3.4.x/handbook/image-file-formats.html) including bmp, jpeg, gif, eps. 
+
+{% highlight python %}
+    from PIL import Image
+
+    #open the input file
+    img = Image.open("LincolnPortrait.jpeg")
+{% endhighlight %}
+
+Step 2: resize the picture
+
+ASCII art is composed of symbols. Symbols naturally have different degrees of darkness because of their shapes. For example, `.` is whiter than `:` which is whiter than `!`. It's easy to illustrate a range of grayscale with symbol patches.
+
+{% include figure image_path="/assets/images/asciiart/demo1.png" alt="symbol block demo1" caption ="4x4 symbol blocks" %}{: .third}
+
+One challenge as you can see from above is that symbols are not necessarily square. If we simply replace image pixels with symbols one-to-one, we will get a picture with distorted width and height. To avoid deformation, we need to carefully calculate how many symbols to use in each row and column in the new image. As a simple example, to draw a small square using symbols of shape ratio 3:4 (width:height), we need to use 4 columns and 3 rows. 
+
+{% include figure image_path="/assets/images/asciiart/demo2.png" alt="symbol block demo2" caption ="Now these patches look more square" %}{: .third}
+
+Another thing to notice is that a symbol is much larger than a pixel(px). So it's not a bad idea to reduce the picture resolution before the conversion. Our program handles the pixel reduction using a scaling factor `SC` between 0(exclusive) and 1(inclusive). The bigger the number is, the more details you would see in the output and the bigger the output image would be. 
+
+{% highlight python %}
+    # Load the fonts and then get the the height and width of a typical symbol 
+    # You can use different fonts here
+    font = ImageFont.load_default()
+    letter_width = font.getsize("x")[0]
+    letter_height = font.getsize("x")[1]
+
+    WCF = letter_height/letter_width
+
+    #Based on the desired output image size, calculate how many ASCII letters are needed on the width and height
+    widthByLetter=round(img.size[0]*SC*WCF)
+    heightByLetter = round(img.size[1]*SC)
+    S = (widthByLetter, heightByLetter)
+
+    #Resize the image based on the symbol width and height
+    img = img.resize(S)
+{% endhighlight %}
+
+Step 3: convert colors to grayscale
+
+Since `img.resize(...)` returns an Image object, it contains RGB values of each pixel on the image. Assume the images is m px width and n px  height, `np.asarray(img)` returns a m* n *3 matrix. 
+
+There are a few methods to convert RGB color to grayscale (John D. Cook describes them well in his [post](https://www.johndcook.com/blog/2009/08/24/algorithms-convert-color-grayscale/)). Here we simply take the average of RGB values and normalize them to get monochrome values. The result is a m *n matrix of float numbers between (0,1). The whitest point of the picture is 0, and the darkest point is 1. Optionally, we can further tune the image brightness using parameter `GCF`. If `GCF` is set to be >1, the picture would look brighter. If 0<`GCF`<1, the picture would look darker. 
+
+{% highlight python %}
+    #Get the RGB color values of each pixel point and convert them to graycolor using the average method from numpy
+    img = np.sum(np.asarray(img), axis=2)
+
+    # Normalize the results
+    img -= img.min()
+    img = (1.0 - img/img.max())
+
+    # (optional) adjust the image brightness
+    img = img**GCF	
+
+{% endhighlight %}
+
+Step 4: create an ASCII art image
+
+The next step is to map grayscale to symbols of different darkness. The first line of the code below defines an array of symbols from the whitest to the darkest. Next, grayscale values are mapped to symbols in the array. There is a lot of flexibility how you can define the array: letters, punctuations, symbols, special characters, etc. It's totally up to you to make it more fun.
+
+`Image.new` and `Image.Draw` provide easy ways to create a blank image, where we will print the mapped symbols line by line. The `for` loop is where the printing actually happen. You can certainly try using the same color for all the symbols, or use functions such as `range_to` in `Colour` to create color patterns. 
+
+{% highlight python %}
+
+
+    # The array of ascii symbols from white to black
+    chars = np.asarray(list(' .,:irs?@9B&#'))
+
+    # Map grayscale values to the index of symbol in the array
+    img = img*(chars.size-1).astype(int)
+
+    # Generate the ascii art symbols 
+    lines = ("\n".join( ("".join(r) for r in chars[img]) )).split("\n")
+
+    #Create an image object, set its width and height, background color
+    bgcolor='white'
+    newImg_width= letter_width *widthByLetter
+    newImg_height = letter_height * heightByLetter
+    newImg = Image.new("RGBA", (newImg_width, newImg_height), bgcolor)
+    draw = ImageDraw.Draw(newImg)
+
+    # (optional) decide color for each line by a gradient spectrum
+    nbins = len(lines)
+    colorRange =list(Color('black').range_to(Color('blue'), nbins))
+
+    # Print symbols to image
+    leftpadding=0
+    y = 0
+    lineIdx=0
+    for line in lines:
+        color = colorRange[lineIdx]
+        lineIdx +=1
+
+        draw.text((leftpadding, y), line, color.hex, font=font)
+        y += letter_height
+
+
+{% endhighlight %}
+
+Step 5: save the ASCII image
+
+{% highlight python %}
+    # Save the image file
+    newImg.save('result.jpg')
+{% endhighlight %}
+
+Click [here](https://gist.github.com/wshanshan/c825efca4501a491447056849dd207d6) to download the sample code. Change the input file name in the bottom section and try it with your own image!
+
+

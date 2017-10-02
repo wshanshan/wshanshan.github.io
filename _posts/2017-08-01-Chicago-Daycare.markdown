@@ -2,7 +2,7 @@
 title:  "Why can't I find a daycare"
 categories: DataDoesNotLie
 tags: Python map geopandas Chicago daycare openData
-excerpt: Location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census. 
+excerpt: Data visualization and location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census. 
 ---
 
 When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families - Lake View, Chicago. It is [2nd in population](https://gist.github.com/wshanshan/e150855f7b09bebc9b1064e30e55a071) among Chicago's 77 communities.

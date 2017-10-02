@@ -24,7 +24,7 @@
 
 
 
-<meta name="description" content="There is a recent post on reddit that shows that data could be vastly different even they can have the same mean and standard deviation. It quickly got more than 5K upvotes and 200 comments. For the least, it speaks to the pain point of many statisticians, data scientists who struggles to convince people that ‘simple-minded’ approach such as box plots is not sufficient.">
+<meta name="description" content="">
 
 
 
@@ -41,7 +41,7 @@
 
 
 
-  <meta property="og:description" content="There is a recent post on reddit that shows that data could be vastly different even they can have the same mean and standard deviation. It quickly got more than 5K upvotes and 200 comments. For the least, it speaks to the pain point of many statisticians, data scientists who struggles to convince people that ‘simple-minded’ approach such as box plots is not sufficient.">
+  <meta property="og:description" content="">
 
 
 
@@ -56,7 +56,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-08-16T20:35:26-05:00">
+  <meta property="article:published_time" content="2017-08-21T16:36:25-05:00">
 
 
 
@@ -69,7 +69,7 @@
     {
       "@context" : "http://schema.org",
       "@type" : "Person",
-      "name" : "Your Name",
+      "name" : "Shanshan Wang",
       "url" : "http://localhost:4000",
       "sameAs" : null
     }
@@ -275,8 +275,8 @@
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="When mean and standard deviation are enough">
-    <meta itemprop="description" content="There is a recent post on reddit that shows that data could be vastly different even they can have the same mean and standard deviation. It quickly got more than 5K upvotes and 200 comments. For the least, it speaks to the pain point of many statisticians, data scientists who struggles to convince people that ‘simple-minded’ approach such as box plots is not sufficient.">
-    <meta itemprop="datePublished" content="August 16, 2017">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="August 21, 2017">
     
 
     <div class="page__inner-wrap">
@@ -290,26 +290,87 @@
 
 
 
-  2 minute read
+  3 minute read
 </p>
           
         </header>
       
 
       <section class="page__content" itemprop="text">
-        <p>There is a recent post on reddit that shows that <a href="https://www.reddit.com/r/dataisbeautiful/comments/6ssmzc/be_wary_of_boxplots_they_could_be_hiding/">data could be vastly different even they can have the same mean and standard deviation</a>. It quickly got more than 5K upvotes and 200 comments. For the least, it speaks to the pain point of many statisticians, data scientists who struggles to convince people that ‘simple-minded’ approach such as box plots is not sufficient.</p>
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<p>I was one of them. New out of school. Trying so hard to explain distribution tails, skewness, multi-modals to people in the manufacturing plant who are comfortably living in the six-sigma world all about mu and sigma. However, I found that <strong>in some models, mean and standard deviations are enough</strong>. In this post, I’m going to show you such an example.</p>
+<p>There is a recent post on reddit that shows that <a href="https://www.reddit.com/r/dataisbeautifulcomments/6ssmzc/be_wary_of_boxplots_they_could_be_hiding/">data could be vastly different in distribution even that they have the same mean and standard deviation</a>. It quickly got more than 5K upvotes and 200 comments. For the least, it speaks to the pain point of many statisticians, data scientists trying to convince people that ‘simple’ approach such as box plots is not sufficient.</p>
 
-<p>Consider a simple case. We have one machine and observe that jobs arrives in Possion distribution, in averge 1 job every 6 hours. The time the machine needs to complete a job varies. We want to decide whether we need to add another machine to keep total cycle time (including queue time) under 8 hours.</p>
+<p>Here I’m going to show you something that might blow your mind. I’m going to show you a case when <strong>mean and standard deviations are enough</strong>.</p>
 
-<p>Assume we have tons of data of service times. The question for modeler/analyst is, how much data analysis is needed here? Does the pattern in the time matter? Does the shape of distribution matter? Through simple statistical summary, we know that the service takes 4 hours in average, 1.732 as standard deviation. Does the real distribution matters?</p>
+<p>The point: the usefulness of details depends on the context and use cases. We shall never lose the understanding of context, which, I would argue, is the most important thing a lot of times.</p>
 
-<p>We’ll use the simulation to answer this question:</p>
+<h2 id="the-case">The case.</h2>
+<p>Assume that we have one machine to process all the incoming jobs (think about a donut shops having one cashier, a one-line cash washer, etc.) . Jobs arrival times follow Possion distribution of 1 job every 6 hours. The service time varies but in average 4 hours per job. Assume that we never lose a job because of waiting time (no preemption), we know that the utilization will be merely around 4/6 = 67%. However, because of the variance in service time, some customers may need to wait for longer time and become pretty upset. The question is that shall we add another machine the average waiting time will be under 8 hours?</p>
 
-<p>Now you may be shake your heads in disbelief. Why is it? The simple case of xxx will give you some hints. It turns out, in a M/G/1 model, that the E(T) and E(N) are functions of first two modes of S and V(T), V(N) are fuctions of first three modes.</p>
+<h3 id="does-the-shape-of-distribution-matter">Does the shape of distribution matter?</h3>
+
+<p>I build a simulation in Anylogic to answer this question, in which I test four service time distributions of very different shapes but of the same mean and standard deviation.  Click <a href="https://cloud.anylogic.com/#/model/a17b5bbe-7c9d-4460-9be7-15c9820ebec0;mode=SETTINGS">simulation model</a></p>
+
+<figure class="align-right">
+  <img src="http://localhost:4000/assets/images/isVarianceEnough/distributions.png" alt="" />
+  
+</figure>
+
+<table>
+  <tbody>
+    <tr>
+      <td>No.</td>
+      <td>Distribution of service time</td>
+      <td>E(T)</td>
+      <td>V(T)</td>
+      <td>E(N)</td>
+      <td>V(N)</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>x ~ uniform(min = 1, max=7)</td>
+      <td>101</td>
+      <td>101</td>
+      <td>101</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><span>x ~ triangular(min=median=4-<script type="math/tex">\sqrt{6}</script>, max =4+2<script type="math/tex">\sqrt{6}</script>) </span></td>
+      <td>102</td>
+      <td>102</td>
+      <td>102</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><span>x ~ normal(mu = 2, sigma=<script type="math/tex">\sqrt{3}</script>)</span></td>
+      <td>102</td>
+      <td>102</td>
+      <td>102</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><span><script type="math/tex">\sqrt{30}x +4-\frac{\sqrt{30}}{4}</script> where x ~ beta(a= <script type="math/tex">\frac{71}{16}</script>, b= <script type="math/tex">\frac{213}{16}</script>)</span></td>
+      <td>102</td>
+      <td>102</td>
+      <td>102</td>
+      <td>102</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Now you may be shake your heads in disbelief. Why is it? The simple case of xxx will give you some hints. It turns out, in a M/G/1 model, that the E(T) and E(N) are functions of first two modes of S and V(T), V(N) are fuctions of first three modes(1).</p>
 
 <p>Implications: it means that if we are use the first two modes of leadtime or buffer as goal metrics, we will get the same optimal number!</p>
+
+<p>$$E(T)= E(S) + \frac{\lambda E(S^2)}{2(1- \rho)}$$</p>
+<p>$$V(N)= \rho + \frac{(\lambda)^2E(S^2)}{2(1- \rho)}$$</p>
+<p>Modeling and Analysis of Manufacturing Systems, 1993 edition, Section 11.2.2</p>
+
+<h3 id="does-the-auto-correlation-pattern-matter">Does the auto-correlation pattern matter?</h3>
 
 <p>Derived distribution 
 https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-436j-fundamentals-of-probability-fall-2008/lecture-notes/MIT6_436JF08_lec10.pdf</p>
@@ -347,7 +408,7 @@ https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-436j-f
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-08-16T20:35:26-05:00">August 16, 2017</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-08-21T16:36:25-05:00">August 21, 2017</time></p>
         
       </footer>
 
@@ -369,11 +430,12 @@ https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-436j-f
       
   <nav class="pagination">
     
-      <a href="http://localhost:4000/python/from-python-console-to-web-application/" class="pagination--pager" title="Convert a Console Python Application to a Web Application
+      <a href="http://localhost:4000/python/asciiart/" class="pagination--pager" title="Convert Photos to ASCII Arts with Python
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="http://localhost:4000/machine%20learning/MachineLearningDaries/" class="pagination--pager" title="Sep28 Ada tree is a good tree
+">Next</a>
     
   </nav>
 
@@ -395,6 +457,59 @@ https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-436j-f
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/machine%20learning/MachineLearningDaries/" rel="permalink">Sep28 Ada tree is a good tree
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">I got asked a lot about the question: Are you familiar with random forest, boosting trees, gradient descent? Do you understand boostrap, cross-validation? Te...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/python/asciiart/" rel="permalink">Convert Photos to ASCII Arts with Python
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">This post shows you how to create ASCII art from an existing picture using Python.
+</p>
+  </article>
+</div>
         
           
 
@@ -438,33 +553,6 @@ https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-436j-f
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/python/asciiart/" rel="permalink">Create ASCII art with Python
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">In this post, I am going to show you how to create ASCII art from an existing picture using Python.
-</p>
-  </article>
-</div>
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
         <a href="http://localhost:4000/datadoesnotlie/Chicago-Daycare/" rel="permalink">Why can’t I find a daycare
 </a>
       
@@ -478,7 +566,7 @@ https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-436j-f
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census.
+    <p class="archive__item-excerpt" itemprop="description">Data visualization and location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census.
 </p>
   </article>
 </div>
@@ -510,7 +598,7 @@ https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-436j-f
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2017 Your Name. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2017 Shanshan Wang. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
