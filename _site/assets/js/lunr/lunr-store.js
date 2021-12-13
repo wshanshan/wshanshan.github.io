@@ -6,7 +6,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Convert Photos to ASCII Arts with Python",
-        "excerpt":"Printed ASCII art is a fabulous gift for a geeky friend. It’s a stylish decoration that looks great on mugs, t-shirts, and even curtains! Making ASCII art is much easier than it looks, and I’m going to show you how to do it in Python! The great thing about coded...","categories": ["Python"],
+        "excerpt":"Printed ASCII art is a fabulous gift for a geeky friend. The great thing about coded artwork is that you can easily give it your own personal touch! It’s a stylish decoration that looks great on mugs, t-shirts, and even curtains. Making ASCII art is much easier than it looks,...","categories": ["Python"],
         "tags": ["Python","ASCII","Art","Tutorial"],
         "url": "/python/asciiart/",
         "teaser": null

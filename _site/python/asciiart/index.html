@@ -300,9 +300,17 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Printed ASCII art is a fabulous gift for a geeky friend. It’s a stylish decoration that looks great on mugs, t-shirts, and even <a href="http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/">curtains</a>! Making ASCII art is much easier than it looks, and I’m going to show you how to do it in Python!</p>
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#step-1-load-a-picture">Step 1: load a picture</a></li><li><a href="#step-2-resize-the-picture">Step 2: resize the picture</a></li><li><a href="#step-3-convert-colors-to-grayscale">Step 3: convert colors to grayscale</a></li><li><a href="#step-4-create-an-ascii-art-image">Step 4: create an ASCII art image</a></li><li><a href="#step-5-save-the-image">Step 5: save the image</a></li></ul>
 
-<p>The great thing about coded artwork is that you can easily <strong>give it your own personal touch</strong>! We’ll use a few Python libraries– <a href="https://pillow.readthedocs.io">Pillow</a>, <a href="https://pypi.python.org/pypi/colour">Colour</a> and a little bit of <a href="https://pypi.python.org/pypi/numpy">Numpy</a>. Pillow handles all the image processing - reading, resizing, writing. Colour gives us the beautiful gradient color. Numpy makes the grayscale conversion easy. Once you understand how the existing code works, you can change fonts/symbols and try out different colors, to turn your favorite picture into your unique signature artwork.</p>
+            </nav>
+          </aside>
+        
+        <p>Printed ASCII art is a fabulous gift for a geeky friend. The great thing about coded artwork is that you can easily <strong>give it your own personal touch</strong>! It’s a stylish decoration that looks great on mugs, t-shirts, and even <a href="http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/">curtains</a>. Making ASCII art is much easier than it looks, and I’m going to show you how to do it in Python!</p>
+
+<p>We’ll use a few Python libraries– <a href="https://pillow.readthedocs.io">Pillow</a>, <a href="https://pypi.python.org/pypi/colour">Colour</a> and <a href="https://pypi.python.org/pypi/numpy">Numpy</a>. Pillow handles all the image processing - reading, resizing, writing. Colour gives us the beautiful gradient color. Numpy makes the grayscale conversion easy. Once you understand how sample codes work, you can change fonts/symbols and try out different colors, to turn your favorite picture into your unique signature artwork.</p>
 
 <figure class="third ">
   
@@ -332,7 +340,7 @@
 
 <p>Prerequisits: Install Python 3 and libraries <a href="https://pillow.readthedocs.io">Pillow</a>, <a href="https://pypi.python.org/pypi/colour">Colour</a> and <a href="https://pypi.python.org/pypi/numpy">Numpy</a></p>
 
-<p>Step 1: load a picture</p>
+<h2 id="step-1-load-a-picture">Step 1: load a picture</h2>
 
 <p>The Image class in PIL (Pillow) provides a lazy function <code class="language-plaintext highlighter-rouge">Image.open</code> to open an image file. At this step, we only identify the image but not actually load it into memory. <code class="language-plaintext highlighter-rouge">Image</code> supports a variety of <a href="http://pillow.readthedocs.io/en/3.4.x/handbook/image-file-formats.html">image types</a> including bmp, jpeg, gif, eps.</p>
 
@@ -341,7 +349,7 @@
     <span class="c1">#open the input file
 </span>    <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="s">"LincolnPortrait.jpeg"</span><span class="p">)</span></code></pre></figure>
 
-<p>Step 2: resize the picture</p>
+<h2 id="step-2-resize-the-picture">Step 2: resize the picture</h2>
 
 <p>ASCII art is composed of symbols. Symbols naturally have different degrees of darkness because of their shapes. For example, <code class="language-plaintext highlighter-rouge">.</code> is whiter than <code class="language-plaintext highlighter-rouge">:</code> which is whiter than <code class="language-plaintext highlighter-rouge">!</code>. It’s easy to illustrate a range of grayscale with symbol patches.</p>
 
@@ -361,7 +369,8 @@
 
 <p>Another thing to notice is that a symbol is much larger than a pixel(px). So it’s not a bad idea to reduce the picture resolution before the conversion. Our program handles the pixel reduction using a scaling factor <code class="language-plaintext highlighter-rouge">SC</code> between 0(exclusive) and 1(inclusive). The bigger the number is, the more details you would see in the output and the bigger the output image would be.</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c1"># Load the fonts and then get the the height and width of a typical symbol 
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c1"># Load the fonts and 
+</span>    <span class="c1">#   then get the the height and width of a typical symbol 
 </span>    <span class="c1"># You can use different fonts here
 </span>    <span class="n">font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="p">.</span><span class="n">load_default</span><span class="p">()</span>
     <span class="n">letter_width</span> <span class="o">=</span> <span class="n">font</span><span class="p">.</span><span class="n">getsize</span><span class="p">(</span><span class="s">"x"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
@@ -369,21 +378,24 @@
 
     <span class="n">WCF</span> <span class="o">=</span> <span class="n">letter_height</span><span class="o">/</span><span class="n">letter_width</span>
 
-    <span class="c1">#Based on the desired output image size, calculate how many ASCII letters are needed on the width and height
+    <span class="c1"># Based on the desired output image size, 
+</span>    <span class="c1"># calculate how many ASCII letters are needed on the width and height
 </span>    <span class="n">widthByLetter</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">SC</span><span class="o">*</span><span class="n">WCF</span><span class="p">)</span>
     <span class="n">heightByLetter</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">SC</span><span class="p">)</span>
     <span class="n">S</span> <span class="o">=</span> <span class="p">(</span><span class="n">widthByLetter</span><span class="p">,</span> <span class="n">heightByLetter</span><span class="p">)</span>
 
-    <span class="c1">#Resize the image based on the symbol width and height
+    <span class="c1"># Resize the image based on the symbol width and height
 </span>    <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">S</span><span class="p">)</span></code></pre></figure>
 
-<p>Step 3: convert colors to grayscale</p>
+<h2 id="step-3-convert-colors-to-grayscale">Step 3: convert colors to grayscale</h2>
 
 <p>Since <code class="language-plaintext highlighter-rouge">img.resize(...)</code> returns an Image object, it contains RGB values of each pixel on the image. Assume the images is m px width and n px  height, <code class="language-plaintext highlighter-rouge">np.asarray(img)</code> returns a m* n *3 matrix.</p>
 
 <p>There are a few methods to convert RGB color to grayscale (John D. Cook describes them well in his <a href="https://www.johndcook.com/blog/2009/08/24/algorithms-convert-color-grayscale/">post</a>). Here we simply take the average of RGB values and normalize them to get monochrome values. The result is a m *n matrix of float numbers between (0,1). The whitest point of the picture is 0, and the darkest point is 1. Optionally, we can further tune the image brightness using parameter <code class="language-plaintext highlighter-rouge">GCF</code>. If <code class="language-plaintext highlighter-rouge">GCF</code> is set to be &gt;1, the picture would look brighter. If 0&lt;<code class="language-plaintext highlighter-rouge">GCF</code>&lt;1, the picture would look darker.</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c1">#Get the RGB color values of each pixel point and convert them to graycolor using the average method from numpy
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c1"># Get the RGB color values of each pixel point 
+</span>    <span class="c1">#  and convert them to graycolor using 
+</span>    <span class="c1">#  the average method from numpy
 </span>    <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
     <span class="c1"># Normalize the results
@@ -393,7 +405,7 @@
     <span class="c1"># (optional) adjust the image brightness
 </span>    <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">**</span><span class="n">GCF</span>	</code></pre></figure>
 
-<p>Step 4: create an ASCII art image</p>
+<h2 id="step-4-create-an-ascii-art-image">Step 4: create an ASCII art image</h2>
 
 <p>The next step is to map grayscale to symbols of different darkness. The first line of the code below defines an array of symbols from the whitest to the darkest. Next, grayscale values are mapped to symbols in the array. There is a lot of flexibility how you can define the array: letters, punctuations, symbols, special characters, etc. It’s totally up to you to make it more fun.</p>
 
@@ -402,22 +414,27 @@
 <figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c1"># The array of ascii symbols from white to black
 </span>    <span class="n">chars</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">asarray</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s">' .,:irs?@9B&amp;#'</span><span class="p">))</span>
 
-    <span class="c1"># Map grayscale values to the index of symbol in the array
+    <span class="c1"># Map grayscale values to the symbol's index in the array
 </span>    <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">*</span><span class="p">(</span><span class="n">chars</span><span class="p">.</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="p">).</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 
     <span class="c1"># Generate the ascii art symbols 
-</span>    <span class="n">lines</span> <span class="o">=</span> <span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">.</span><span class="n">join</span><span class="p">(</span> <span class="p">(</span><span class="s">""</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">chars</span><span class="p">[</span><span class="n">img</span><span class="p">])</span> <span class="p">)).</span><span class="n">split</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+</span>    <span class="n">lines</span> <span class="o">=</span> <span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">.</span><span class="n">join</span><span class="p">(</span>
+      <span class="p">(</span><span class="s">""</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">chars</span><span class="p">[</span><span class="n">img</span><span class="p">])</span> <span class="p">)).</span><span class="n">split</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
 
-    <span class="c1">#Create an image object, set its width and height, background color
+    <span class="c1"># Create an image object, set its width and height, 
+</span>    <span class="c1">#  background color
 </span>    <span class="n">bgcolor</span><span class="o">=</span><span class="s">'white'</span>
     <span class="n">newImg_width</span><span class="o">=</span> <span class="n">letter_width</span> <span class="o">*</span><span class="n">widthByLetter</span>
     <span class="n">newImg_height</span> <span class="o">=</span> <span class="n">letter_height</span> <span class="o">*</span> <span class="n">heightByLetter</span>
-    <span class="n">newImg</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s">"RGBA"</span><span class="p">,</span> <span class="p">(</span><span class="n">newImg_width</span><span class="p">,</span> <span class="n">newImg_height</span><span class="p">),</span> <span class="n">bgcolor</span><span class="p">)</span>
+    <span class="n">newImg</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s">"RGBA"</span><span class="p">,</span> <span class="p">(</span>
+      <span class="n">newImg_width</span><span class="p">,</span> <span class="n">newImg_height</span><span class="p">),</span> <span class="n">bgcolor</span><span class="p">)</span>
     <span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">newImg</span><span class="p">)</span>
 
-    <span class="c1"># (optional) decide color for each line by a gradient spectrum
+    <span class="c1"># pick color for each line by a gradient spectrum
 </span>    <span class="n">nbins</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
-    <span class="n">colorRange</span> <span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="s">'black'</span><span class="p">).</span><span class="n">range_to</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="s">'blue'</span><span class="p">),</span> <span class="n">nbins</span><span class="p">))</span>
+    <span class="n">colorRange</span> <span class="o">=</span><span class="nb">list</span><span class="p">(</span>
+      <span class="n">Color</span><span class="p">(</span><span class="s">'black'</span><span class="p">).</span><span class="n">range_to</span><span class="p">(</span>
+        <span class="n">Color</span><span class="p">(</span><span class="s">'blue'</span><span class="p">),</span> <span class="n">nbins</span><span class="p">))</span>
 
     <span class="c1"># Print symbols to image
 </span>    <span class="n">leftpadding</span><span class="o">=</span><span class="mi">0</span>
@@ -427,10 +444,11 @@
         <span class="n">color</span> <span class="o">=</span> <span class="n">colorRange</span><span class="p">[</span><span class="n">lineIdx</span><span class="p">]</span>
         <span class="n">lineIdx</span> <span class="o">+=</span><span class="mi">1</span>
 
-        <span class="n">draw</span><span class="p">.</span><span class="n">text</span><span class="p">((</span><span class="n">leftpadding</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">line</span><span class="p">,</span> <span class="n">color</span><span class="p">.</span><span class="nb">hex</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
+        <span class="n">draw</span><span class="p">.</span><span class="n">text</span><span class="p">((</span><span class="n">leftpadding</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> 
+          <span class="n">line</span><span class="p">,</span> <span class="n">color</span><span class="p">.</span><span class="nb">hex</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
         <span class="n">y</span> <span class="o">+=</span> <span class="n">letter_height</span></code></pre></figure>
 
-<p>Step 5: save the ASCII image</p>
+<h2 id="step-5-save-the-image">Step 5: save the image</h2>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c1"># Save the image file
 </span>    <span class="n">newImg</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="s">'result.jpg'</span><span class="p">)</span></code></pre></figure>

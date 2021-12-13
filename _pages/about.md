@@ -11,12 +11,12 @@ comments: true
 > You can, you should, and if you’re brave enough to start, you will.
 > <cite> Stephen King, On Writing: A Memoir of the Craft</cite>
 
-Hi, Thanks for checking out this website. My name is Shanshan. I am an independent data science consultant living in NJ. 
+Hi, 
 
-My professional training was in Computer Science and Industrial Engineering. I practiced simulation, optimization, machine learning and managing teams and projects for years in big corporations for more than 10+ years. 
+Thanks for checking out this site. My name is Shanshan. I am a data scientist. At days when I'm brave enough I call myself an operations researcher. Even that means less people would know what I do. 
 
-As a slave to my own curiority, I am always trying out new software, solving puzzles and doing some craft ideas. 
+I make a living by solving problems with data, algorithms and working with people. At spare time, I cook, do art projects and try to outsmart my kids by playing Minecraft. 
 
-I hope you find something interesting here. Drop me a note.
+This site is a place of me sharing useful information, fun projects or anything else.
 
-
+I hope you find something interesting here. Drop me a note if so.
