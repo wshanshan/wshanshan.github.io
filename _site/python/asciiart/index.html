@@ -1,44 +1,24 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.4.2 by Michael Rose
-  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
 
-<!-- begin SEO -->
-
-
-
-
-
-
-
-
-
-<title>Convert Photos to ASCII Arts with Python - Tinkering</title>
-
-
-
-
+<!-- begin _includes/seo.html --><title>Convert Photos to ASCII Arts with Python - Tinkering</title>
 <meta name="description" content="This post shows you how to create ASCII art from an existing picture using Python.">
 
 
 
-
-<meta name="author" content="">
-
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="Tinkering">
 <meta property="og:title" content="Convert Photos to ASCII Arts with Python">
-
-
-  <link rel="canonical" href="http://localhost:4000/python/asciiart/">
-  <meta property="og:url" content="http://localhost:4000/python/asciiart/">
-
+<meta property="og:url" content="http://localhost:4000/python/asciiart/">
 
 
   <meta property="og:description" content="This post shows you how to create ASCII art from an existing picture using Python.">
@@ -47,47 +27,49 @@
 
 
 
+
+
+  <meta property="article:published_time" content="2017-08-20T00:00:00-04:00">
+
+
+
+
+
   
 
   
 
 
-
-
-
-  <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-08-20T00:00:00-05:00">
+<link rel="canonical" href="http://localhost:4000/python/asciiart/">
 
 
 
 
-
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context" : "http://schema.org",
-      "@type" : "Person",
-      "name" : "Shanshan Wang",
-      "url" : "http://localhost:4000",
-      "sameAs" : null
-    }
-  </script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Shanshan Wang",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
 
 
 
 
 
 
-<!-- end SEO -->
+
+<!-- end _includes/seo.html -->
 
 
-<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Tinkering Feed">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Tinkering Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -95,64 +77,67 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
 
-<!--[if lte IE 9]>
-  <style>
-    /* old IE unsupported flexbox fixes */
-    .greedy-nav .site-title {
-      padding-right: 3em;
-    }
-    .greedy-nav button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-    }
-  </style>
-<![endif]-->
 
-<meta http-equiv="cleartype" content="on">
+
     <!-- start custom head snippets -->
 
-<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
 
 <!-- end custom head snippets -->
+
   </head>
 
   <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
 
     <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
-    <div class="masthead">
+
+    
+
+<div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="http://localhost:4000/">Tinkering</a>
-        <ul class="visible-links">
+        
+        <a class="site-title" href="/">
+          Tinkering
           
-            
-            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="http://localhost:4000/categories/">Categories</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="http://localhost:4000/tags/">Tags</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Archive</a></li>
-          
-        </ul>
-        <button><div class="navicon"></div></button>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Archive</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>
 </div>
 
-    
+
+    <div class="initial-content">
+      
 
 
 
@@ -161,22 +146,26 @@
   <div class="sidebar sticky">
   
 
-<div itemscope itemtype="http://schema.org/Person">
+
+<div itemscope itemtype="https://schema.org/Person">
 
   
     <div class="author__avatar">
       
-        <img src="http://localhost:4000/assets/images/sw2.jpg" class="author__avatar" alt="" itemprop="image">
+        <img src="/assets/images/IMG_20211213_091403_816.jpg" alt="" itemprop="image">
       
     </div>
   
 
   <div class="author__content">
-    <h3 class="author__name" itemprop="name"></h3>
     
-      <p class="author__bio" itemprop="description">
-        A data interrogator, model tinkerer on the prowl
-      </p>
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Model tinkerer on the prowl</p>
+
+      </div>
     
   </div>
 
@@ -184,9 +173,11 @@
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       
-        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
-          <i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> <span itemprop="name">Chicago, IL</span>
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">New Jersey / NYC</span>
         </li>
+      
+
       
 
       
@@ -195,7 +186,21 @@
         <li>
           <a href="mailto:wshanshan@gmail.com">
             <meta itemprop="email" content="wshanshan@gmail.com" />
-            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/shanshan-w-nj" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span>
           </a>
         </li>
       
@@ -210,24 +215,8 @@
 
       
         <li>
-          <a href="https://www.linkedin.com/in/shanshan-wang-56590115" itemprop="sameAs">
-            <i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> LinkedIn
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-        <li>
-          <a href="https://github.com/wshanshan" itemprop="sameAs">
-            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          <a href="https://github.com/wshanshan" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
           </a>
         </li>
       
@@ -260,8 +249,8 @@
 
       <!--
   <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
-      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
     </a>
   </li>
 -->
@@ -273,30 +262,44 @@
   </div>
 
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Convert Photos to ASCII Arts with Python">
     <meta itemprop="description" content="This post shows you how to create ASCII art from an existing picture using Python.">
-    <meta itemprop="datePublished" content="August 20, 2017">
+    <meta itemprop="datePublished" content="2017-08-20T00:00:00-04:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Convert Photos to ASCII Arts with Python
+          <h1 id="page-title" class="page__title" itemprop="headline">Convert Photos to ASCII Arts with Python
 </h1>
           
-            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
 
 
-
-
-  6 minute read
-</p>
-          
         </header>
       
 
       <section class="page__content" itemprop="text">
+        
         <p>Printed ASCII art is a fabulous gift for a geeky friend. It’s a stylish decoration that looks great on mugs, t-shirts, and even <a href="http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/">curtains</a>! Making ASCII art is much easier than it looks, and I’m going to show you how to do it in Python!</p>
 
 <p>The great thing about coded artwork is that you can easily <strong>give it your own personal touch</strong>! We’ll use a few Python libraries– <a href="https://pillow.readthedocs.io">Pillow</a>, <a href="https://pypi.python.org/pypi/colour">Colour</a> and a little bit of <a href="https://pypi.python.org/pypi/numpy">Numpy</a>. Pillow handles all the image processing - reading, resizing, writing. Colour gives us the beautiful gradient color. Numpy makes the grayscale conversion easy. Once you understand how the existing code works, you can change fonts/symbols and try out different colors, to turn your favorite picture into your unique signature artwork.</p>
@@ -304,20 +307,20 @@
 <figure class="third ">
   
     
-      <a href="http://localhost:4000/assets/images/asciiart/IQaH96.jpeg" title="Input image">
-        <img src="http://localhost:4000/assets/images/asciiart/IQaH96.jpeg" alt="Input image" />
+      <a href="/assets/images/asciiart/IQaH96.jpeg" title="Input image">
+          <img src="/assets/images/asciiart/IQaH96.jpeg" alt="Input image" />
       </a>
     
   
     
-      <a href="http://localhost:4000/assets/images/asciiart/results.png" title="Output image example 1. SC=1,GCF=2, gradient color blue to pink">
-        <img src="http://localhost:4000/assets/images/asciiart/results.png" alt="Output image example 1.  SC=1,GCF=2,gradient color black to blue" />
+      <a href="/assets/images/asciiart/results.png" title="Output image example 1. SC=1,GCF=2, gradient color blue to pink">
+          <img src="/assets/images/asciiart/results.png" alt="Output image example 1.  SC=1,GCF=2,gradient color black to blue" />
       </a>
     
   
     
-      <a href="http://localhost:4000/assets/images/asciiart/results_pink.png" title="Output image example 2. SC=1,GCF=2, gradient color blue to pink">
-        <img src="http://localhost:4000/assets/images/asciiart/results_pink.png" alt="Output image example 2. SC=1,GCF=2, gradient color blue to pink" />
+      <a href="/assets/images/asciiart/results_pink.png" title="Output image example 2. SC=1,GCF=2, gradient color blue to pink">
+          <img src="/assets/images/asciiart/results_pink.png" alt="Output image example 2. SC=1,GCF=2, gradient color blue to pink" />
       </a>
     
   
@@ -331,110 +334,106 @@
 
 <p>Step 1: load a picture</p>
 
-<p>The Image class in PIL (Pillow) provides a lazy function <code class="highlighter-rouge">Image.open</code> to open an image file. At this step, we only identify the image but not actually load it into memory. <code class="highlighter-rouge">Image</code> supports a variety of <a href="http://pillow.readthedocs.io/en/3.4.x/handbook/image-file-formats.html">image types</a> including bmp, jpeg, gif, eps.</p>
+<p>The Image class in PIL (Pillow) provides a lazy function <code class="language-plaintext highlighter-rouge">Image.open</code> to open an image file. At this step, we only identify the image but not actually load it into memory. <code class="language-plaintext highlighter-rouge">Image</code> supports a variety of <a href="http://pillow.readthedocs.io/en/3.4.x/handbook/image-file-formats.html">image types</a> including bmp, jpeg, gif, eps.</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 
-    <span class="c">#open the input file</span>
-    <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="s">"LincolnPortrait.jpeg"</span><span class="p">)</span></code></pre></figure>
+    <span class="c1">#open the input file
+</span>    <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="s">"LincolnPortrait.jpeg"</span><span class="p">)</span></code></pre></figure>
 
 <p>Step 2: resize the picture</p>
 
-<p>ASCII art is composed of symbols. Symbols naturally have different degrees of darkness because of their shapes. For example, <code class="highlighter-rouge">.</code> is whiter than <code class="highlighter-rouge">:</code> which is whiter than <code class="highlighter-rouge">!</code>. It’s easy to illustrate a range of grayscale with symbol patches.</p>
+<p>ASCII art is composed of symbols. Symbols naturally have different degrees of darkness because of their shapes. For example, <code class="language-plaintext highlighter-rouge">.</code> is whiter than <code class="language-plaintext highlighter-rouge">:</code> which is whiter than <code class="language-plaintext highlighter-rouge">!</code>. It’s easy to illustrate a range of grayscale with symbol patches.</p>
 
 <figure class="third">
-  <img src="http://localhost:4000/assets/images/asciiart/demo1.png" alt="symbol block demo1" />
-  
-    <figcaption>4x4 symbol blocks
-</figcaption>
-  
-</figure>
+  <img src="/assets/images/asciiart/demo1.png" alt="symbol block demo1" /><figcaption>
+      4x4 symbol blocks
+
+    </figcaption></figure>
 
 <p>One challenge as you can see from above is that symbols are not necessarily square. If we simply replace image pixels with symbols one-to-one, we will get a picture with distorted width and height. To avoid deformation, we need to carefully calculate how many symbols to use in each row and column in the new image. As a simple example, to draw a small square using symbols of shape ratio 3:4 (width:height), we need to use 4 columns and 3 rows.</p>
 
 <figure class="third">
-  <img src="http://localhost:4000/assets/images/asciiart/demo2.png" alt="symbol block demo2" />
-  
-    <figcaption>Now these patches look more square
-</figcaption>
-  
-</figure>
+  <img src="/assets/images/asciiart/demo2.png" alt="symbol block demo2" /><figcaption>
+      Now these patches look more square
 
-<p>Another thing to notice is that a symbol is much larger than a pixel(px). So it’s not a bad idea to reduce the picture resolution before the conversion. Our program handles the pixel reduction using a scaling factor <code class="highlighter-rouge">SC</code> between 0(exclusive) and 1(inclusive). The bigger the number is, the more details you would see in the output and the bigger the output image would be.</p>
+    </figcaption></figure>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c"># Load the fonts and then get the the height and width of a typical symbol </span>
-    <span class="c"># You can use different fonts here</span>
-    <span class="n">font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">load_default</span><span class="p">()</span>
-    <span class="n">letter_width</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="s">"x"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">letter_height</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="s">"x"</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+<p>Another thing to notice is that a symbol is much larger than a pixel(px). So it’s not a bad idea to reduce the picture resolution before the conversion. Our program handles the pixel reduction using a scaling factor <code class="language-plaintext highlighter-rouge">SC</code> between 0(exclusive) and 1(inclusive). The bigger the number is, the more details you would see in the output and the bigger the output image would be.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c1"># Load the fonts and then get the the height and width of a typical symbol 
+</span>    <span class="c1"># You can use different fonts here
+</span>    <span class="n">font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="p">.</span><span class="n">load_default</span><span class="p">()</span>
+    <span class="n">letter_width</span> <span class="o">=</span> <span class="n">font</span><span class="p">.</span><span class="n">getsize</span><span class="p">(</span><span class="s">"x"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">letter_height</span> <span class="o">=</span> <span class="n">font</span><span class="p">.</span><span class="n">getsize</span><span class="p">(</span><span class="s">"x"</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
 
     <span class="n">WCF</span> <span class="o">=</span> <span class="n">letter_height</span><span class="o">/</span><span class="n">letter_width</span>
 
-    <span class="c">#Based on the desired output image size, calculate how many ASCII letters are needed on the width and height</span>
-    <span class="n">widthByLetter</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">SC</span><span class="o">*</span><span class="n">WCF</span><span class="p">)</span>
-    <span class="n">heightByLetter</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">SC</span><span class="p">)</span>
+    <span class="c1">#Based on the desired output image size, calculate how many ASCII letters are needed on the width and height
+</span>    <span class="n">widthByLetter</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">SC</span><span class="o">*</span><span class="n">WCF</span><span class="p">)</span>
+    <span class="n">heightByLetter</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">SC</span><span class="p">)</span>
     <span class="n">S</span> <span class="o">=</span> <span class="p">(</span><span class="n">widthByLetter</span><span class="p">,</span> <span class="n">heightByLetter</span><span class="p">)</span>
 
-    <span class="c">#Resize the image based on the symbol width and height</span>
-    <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">S</span><span class="p">)</span></code></pre></figure>
+    <span class="c1">#Resize the image based on the symbol width and height
+</span>    <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">S</span><span class="p">)</span></code></pre></figure>
 
 <p>Step 3: convert colors to grayscale</p>
 
-<p>Since <code class="highlighter-rouge">img.resize(...)</code> returns an Image object, it contains RGB values of each pixel on the image. Assume the images is m px width and n px  height, <code class="highlighter-rouge">np.asarray(img)</code> returns a m* n *3 matrix.</p>
+<p>Since <code class="language-plaintext highlighter-rouge">img.resize(...)</code> returns an Image object, it contains RGB values of each pixel on the image. Assume the images is m px width and n px  height, <code class="language-plaintext highlighter-rouge">np.asarray(img)</code> returns a m* n *3 matrix.</p>
 
-<p>There are a few methods to convert RGB color to grayscale (John D. Cook describes them well in his <a href="https://www.johndcook.com/blog/2009/08/24/algorithms-convert-color-grayscale/">post</a>). Here we simply take the average of RGB values and normalize them to get monochrome values. The result is a m *n matrix of float numbers between (0,1). The whitest point of the picture is 0, and the darkest point is 1. Optionally, we can further tune the image brightness using parameter <code class="highlighter-rouge">GCF</code>. If <code class="highlighter-rouge">GCF</code> is set to be &gt;1, the picture would look brighter. If 0&lt;<code class="highlighter-rouge">GCF</code>&lt;1, the picture would look darker.</p>
+<p>There are a few methods to convert RGB color to grayscale (John D. Cook describes them well in his <a href="https://www.johndcook.com/blog/2009/08/24/algorithms-convert-color-grayscale/">post</a>). Here we simply take the average of RGB values and normalize them to get monochrome values. The result is a m *n matrix of float numbers between (0,1). The whitest point of the picture is 0, and the darkest point is 1. Optionally, we can further tune the image brightness using parameter <code class="language-plaintext highlighter-rouge">GCF</code>. If <code class="language-plaintext highlighter-rouge">GCF</code> is set to be &gt;1, the picture would look brighter. If 0&lt;<code class="language-plaintext highlighter-rouge">GCF</code>&lt;1, the picture would look darker.</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c">#Get the RGB color values of each pixel point and convert them to graycolor using the average method from numpy</span>
-    <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c1">#Get the RGB color values of each pixel point and convert them to graycolor using the average method from numpy
+</span>    <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
-    <span class="c"># Normalize the results</span>
-    <span class="n">img</span> <span class="o">-=</span> <span class="n">img</span><span class="o">.</span><span class="nb">min</span><span class="p">()</span>
-    <span class="n">img</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">img</span><span class="o">/</span><span class="n">img</span><span class="o">.</span><span class="nb">max</span><span class="p">())</span>
+    <span class="c1"># Normalize the results
+</span>    <span class="n">img</span> <span class="o">-=</span> <span class="n">img</span><span class="p">.</span><span class="nb">min</span><span class="p">()</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">img</span><span class="o">/</span><span class="n">img</span><span class="p">.</span><span class="nb">max</span><span class="p">())</span>
 
-    <span class="c"># (optional) adjust the image brightness</span>
-    <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">**</span><span class="n">GCF</span>	</code></pre></figure>
+    <span class="c1"># (optional) adjust the image brightness
+</span>    <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">**</span><span class="n">GCF</span>	</code></pre></figure>
 
 <p>Step 4: create an ASCII art image</p>
 
 <p>The next step is to map grayscale to symbols of different darkness. The first line of the code below defines an array of symbols from the whitest to the darkest. Next, grayscale values are mapped to symbols in the array. There is a lot of flexibility how you can define the array: letters, punctuations, symbols, special characters, etc. It’s totally up to you to make it more fun.</p>
 
-<p><code class="highlighter-rouge">Image.new</code> and <code class="highlighter-rouge">Image.Draw</code> provide easy ways to create a blank image, where we will print the mapped symbols line by line. The <code class="highlighter-rouge">for</code> loop is where the printing actually happen. You can certainly try using the same color for all the symbols, or use functions such as <code class="highlighter-rouge">range_to</code> in <code class="highlighter-rouge">Colour</code> to create color patterns.</p>
+<p><code class="language-plaintext highlighter-rouge">Image.new</code> and <code class="language-plaintext highlighter-rouge">Image.Draw</code> provide easy ways to create a blank image, where we will print the mapped symbols line by line. The <code class="language-plaintext highlighter-rouge">for</code> loop is where the printing actually happen. You can certainly try using the same color for all the symbols, or use functions such as <code class="language-plaintext highlighter-rouge">range_to</code> in <code class="language-plaintext highlighter-rouge">Colour</code> to create color patterns.</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c"># The array of ascii symbols from white to black</span>
-    <span class="n">chars</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s">' .,:irs?@9B&amp;#'</span><span class="p">))</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c1"># The array of ascii symbols from white to black
+</span>    <span class="n">chars</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">asarray</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s">' .,:irs?@9B&amp;#'</span><span class="p">))</span>
 
-    <span class="c"># Map grayscale values to the index of symbol in the array</span>
-    <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">*</span><span class="p">(</span><span class="n">chars</span><span class="o">.</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="c1"># Map grayscale values to the index of symbol in the array
+</span>    <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">*</span><span class="p">(</span><span class="n">chars</span><span class="p">.</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="p">).</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 
-    <span class="c"># Generate the ascii art symbols </span>
-    <span class="n">lines</span> <span class="o">=</span> <span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="p">(</span><span class="s">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">chars</span><span class="p">[</span><span class="n">img</span><span class="p">])</span> <span class="p">))</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+    <span class="c1"># Generate the ascii art symbols 
+</span>    <span class="n">lines</span> <span class="o">=</span> <span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">.</span><span class="n">join</span><span class="p">(</span> <span class="p">(</span><span class="s">""</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">chars</span><span class="p">[</span><span class="n">img</span><span class="p">])</span> <span class="p">)).</span><span class="n">split</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
 
-    <span class="c">#Create an image object, set its width and height, background color</span>
-    <span class="n">bgcolor</span><span class="o">=</span><span class="s">'white'</span>
+    <span class="c1">#Create an image object, set its width and height, background color
+</span>    <span class="n">bgcolor</span><span class="o">=</span><span class="s">'white'</span>
     <span class="n">newImg_width</span><span class="o">=</span> <span class="n">letter_width</span> <span class="o">*</span><span class="n">widthByLetter</span>
     <span class="n">newImg_height</span> <span class="o">=</span> <span class="n">letter_height</span> <span class="o">*</span> <span class="n">heightByLetter</span>
-    <span class="n">newImg</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s">"RGBA"</span><span class="p">,</span> <span class="p">(</span><span class="n">newImg_width</span><span class="p">,</span> <span class="n">newImg_height</span><span class="p">),</span> <span class="n">bgcolor</span><span class="p">)</span>
-    <span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">newImg</span><span class="p">)</span>
+    <span class="n">newImg</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s">"RGBA"</span><span class="p">,</span> <span class="p">(</span><span class="n">newImg_width</span><span class="p">,</span> <span class="n">newImg_height</span><span class="p">),</span> <span class="n">bgcolor</span><span class="p">)</span>
+    <span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">newImg</span><span class="p">)</span>
 
-    <span class="c"># (optional) decide color for each line by a gradient spectrum</span>
-    <span class="n">nbins</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
-    <span class="n">colorRange</span> <span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="s">'black'</span><span class="p">)</span><span class="o">.</span><span class="n">range_to</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="s">'blue'</span><span class="p">),</span> <span class="n">nbins</span><span class="p">))</span>
+    <span class="c1"># (optional) decide color for each line by a gradient spectrum
+</span>    <span class="n">nbins</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+    <span class="n">colorRange</span> <span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="s">'black'</span><span class="p">).</span><span class="n">range_to</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="s">'blue'</span><span class="p">),</span> <span class="n">nbins</span><span class="p">))</span>
 
-    <span class="c"># Print symbols to image</span>
-    <span class="n">leftpadding</span><span class="o">=</span><span class="mi">0</span>
+    <span class="c1"># Print symbols to image
+</span>    <span class="n">leftpadding</span><span class="o">=</span><span class="mi">0</span>
     <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">lineIdx</span><span class="o">=</span><span class="mi">0</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
         <span class="n">color</span> <span class="o">=</span> <span class="n">colorRange</span><span class="p">[</span><span class="n">lineIdx</span><span class="p">]</span>
         <span class="n">lineIdx</span> <span class="o">+=</span><span class="mi">1</span>
 
-        <span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="n">leftpadding</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">line</span><span class="p">,</span> <span class="n">color</span><span class="o">.</span><span class="nb">hex</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
+        <span class="n">draw</span><span class="p">.</span><span class="n">text</span><span class="p">((</span><span class="n">leftpadding</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">line</span><span class="p">,</span> <span class="n">color</span><span class="p">.</span><span class="nb">hex</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
         <span class="n">y</span> <span class="o">+=</span> <span class="n">letter_height</span></code></pre></figure>
 
 <p>Step 5: save the ASCII image</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c"># Save the image file</span>
-    <span class="n">newImg</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">'result.jpg'</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="c1"># Save the image file
+</span>    <span class="n">newImg</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="s">'result.jpg'</span><span class="p">)</span></code></pre></figure>
 
 <p>Click <a href="https://gist.github.com/wshanshan/c825efca4501a491447056849dd207d6">here</a> to download the sample code. Change the input file name in the bottom section and try it with your own image!</p>
 
@@ -449,28 +448,18 @@
 
 
   
-  
-  
 
   <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      
-      
-      <a href="http://localhost:4000/tags/#art" class="page__taxonomy-item" rel="tag">Art</a><span class="sep">, </span>
+      <a href="/tags/#art" class="page__taxonomy-item" rel="tag">Art</a><span class="sep">, </span>
     
-      
-      
-      <a href="http://localhost:4000/tags/#ascii" class="page__taxonomy-item" rel="tag">ASCII</a><span class="sep">, </span>
+      <a href="/tags/#ascii" class="page__taxonomy-item" rel="tag">ASCII</a><span class="sep">, </span>
     
-      
-      
-      <a href="http://localhost:4000/tags/#python" class="page__taxonomy-item" rel="tag">Python</a><span class="sep">, </span>
+      <a href="/tags/#python" class="page__taxonomy-item" rel="tag">Python</a><span class="sep">, </span>
     
-      
-      
-      <a href="http://localhost:4000/tags/#tutorial" class="page__taxonomy-item" rel="tag">Tutorial</a>
+      <a href="/tags/#tutorial" class="page__taxonomy-item" rel="tag">Tutorial</a>
     
     </span>
   </p>
@@ -482,24 +471,22 @@
 
 
   
-  
-  
 
   <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      
-      
-      <a href="http://localhost:4000/categories/#python" class="page__taxonomy-item" rel="tag">Python</a>
+      <a href="/categories/#python" class="page__taxonomy-item" rel="tag">Python</a>
     
     </span>
   </p>
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-08-20T00:00:00-05:00">August 20, 2017</time></p>
-        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-08-20T00:00:00-04:00">August 20, 2017</time></p>
+
+
       </footer>
 
       <section class="page__share">
@@ -507,38 +494,27 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Convert Photos to ASCII Arts with Python http://localhost:4000/python/asciiart/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Convert+Photos+to+ASCII+Arts+with+Python%20http%3A%2F%2Flocalhost%3A4000%2Fpython%2Fasciiart%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/python/asciiart/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fpython%2Fasciiart%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=http://localhost:4000/python/asciiart/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/python/asciiart/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fpython%2Fasciiart%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="http://localhost:4000/python/from-python-console-to-web-application/" class="pagination--pager" title="Convert a Console Python Application to a Web Application
+      <a href="/datadoesnotlie/Chicago-Daycare/" class="pagination--pager" title="Why can’t I find a daycare
 ">Previous</a>
     
     
-      <a href="http://localhost:4000/simulation/distributionInSimulation/" class="pagination--pager" title="When mean and standard deviation are enough
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
     </div>
 
-    
-      <div class="page__comments">
-  
-    
-        <h4 class="page__comments-title">Leave a Comment</h4>
-        <section id="disqus_thread"></section>
-      
-</div>
     
   </article>
 
@@ -553,122 +529,52 @@
 
 
 <div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="http://localhost:4000/machine%20learning/MachineLearningDaries/" rel="permalink">Sep28 Ada tree is a good tree
+        <a href="/datadoesnotlie/Chicago-Daycare/" rel="permalink">Why can’t I find a daycare
 </a>
       
     </h2>
     
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
 
-
-
-
-  less than 1 minute read
-</p>
+  <p class="page__meta">
     
-    <p class="archive__item-excerpt" itemprop="description">I got asked a lot about the question: Are you familiar with random forest, boosting trees, gradient descent? Do you understand boostrap, cross-validation? Te...</p>
-  </article>
-</div>
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
         
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/simulation/distributionInSimulation/" rel="permalink">When mean and standard deviation are enough
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-
-
-
-
-  3 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
+          3 minute read
         
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      </span>
     
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/python/from-python-console-to-web-application/" rel="permalink">Convert a Console Python Application to a Web Application
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+  </p>
 
 
-
-
-  5 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-
-     Table of Contents
-
-  
-
-
-</p>
-  </article>
-</div>
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/datadoesnotlie/Chicago-Daycare/" rel="permalink">Why can’t I find a daycare
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-
-
-
-
-  3 minute read
-</p>
-    
     <p class="archive__item-excerpt" itemprop="description">Data visualization and location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census.
 </p>
   </article>
 </div>
+
         
       </div>
     </div>
   
+  
 </div>
 
+    </div>
 
-    <div class="page__footer">
+    
+
+    <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
 
@@ -678,66 +584,48 @@
     
       <li><strong>Follow:</strong></li>
     
+
     
+
     
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
-      <li><a href="http://github.com/wshanshan"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
-    
-    
-    
-    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2017 Shanshan Wang. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 Shanshan Wang. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
-    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+    
+  <script src="/assets/js/main.min.js"></script>
 
 
 
 
-  <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-104088948-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 
 
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/python/asciiart/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/python/asciiart"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://blog-ppnrqgob2p.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
   
-      
-  <script type="text/javascript">
-  	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-  	var disqus_shortname = 'blog-ppnrqgob2p';
 
-  	/* * * DON'T EDIT BELOW THIS LINE * * */
-  	(function() {
-  		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  	})();
 
-  	/* * * DON'T EDIT BELOW THIS LINE * * */
-  	(function () {
-  		var s = document.createElement('script'); s.async = true;
-  		s.type = 'text/javascript';
-  		s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-  		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-  	}());
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-    
 
 
 

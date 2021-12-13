@@ -1,53 +1,27 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.4.2 by Michael Rose
-  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
 
-<!-- begin SEO -->
-
-
-
-
-
-
-
-
-
-<title>Welcome - Tinkering</title>
-
-
-
-
+<!-- begin _includes/seo.html --><title>Welcome - Tinkering</title>
 <meta name="description" content="An amazing website about process simulation, data visualization and machine learning">
 
 
 
-
-<meta name="author" content="">
-
+<meta property="og:type" content="website">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="Tinkering">
 <meta property="og:title" content="Welcome">
+<meta property="og:url" content="http://localhost:4000/">
 
 
-  <link rel="canonical" href="http://localhost:4000/">
-  <meta property="og:url" content="http://localhost:4000/">
-
-
-
-
-
-
-
-  
-
-  
+  <meta property="og:description" content="An amazing website about process simulation, data visualization and machine learning">
 
 
 
@@ -61,30 +35,41 @@
 
 
 
+  
 
-  <script type="application/ld+json">
-    {
-      "@context" : "http://schema.org",
-      "@type" : "Person",
-      "name" : "Shanshan Wang",
-      "url" : "http://localhost:4000",
-      "sameAs" : null
-    }
-  </script>
+  
+
+
+<link rel="canonical" href="http://localhost:4000/">
 
 
 
 
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Shanshan Wang",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
 
 
-<!-- end SEO -->
 
 
-<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Tinkering Feed">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Tinkering Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -92,64 +77,67 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
 
-<!--[if lte IE 9]>
-  <style>
-    /* old IE unsupported flexbox fixes */
-    .greedy-nav .site-title {
-      padding-right: 3em;
-    }
-    .greedy-nav button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-    }
-  </style>
-<![endif]-->
 
-<meta http-equiv="cleartype" content="on">
+
     <!-- start custom head snippets -->
 
-<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
 
 <!-- end custom head snippets -->
+
   </head>
 
   <body class="layout--home">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
 
     <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
-    <div class="masthead">
+
+    
+
+<div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="http://localhost:4000/">Tinkering</a>
-        <ul class="visible-links">
+        
+        <a class="site-title" href="/">
+          Tinkering
           
-            
-            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="http://localhost:4000/categories/">Categories</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="http://localhost:4000/tags/">Tags</a></li>
-          
-            
-            <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Archive</a></li>
-          
-        </ul>
-        <button><div class="navicon"></div></button>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Archive</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>
 </div>
 
-    
+
+    <div class="initial-content">
+      
   
 
 
@@ -159,17 +147,20 @@
 
 
 <div class="page__hero--overlay"
-  style=" background-image: url('http://localhost:4000/assets/images/redd-angelo-28516.jpg');"
+  style=" background-image: url('/assets/images/redd-angelo-28516.jpg');"
 >
   
     <div class="wrapper">
-      <h1 class="page__title" itemprop="headline">
+      <h1 id="page-title" class="page__title" itemprop="headline">
         
           Welcome
 
         
       </h1>
       
+      
+
+
       
       
     </div>
@@ -189,22 +180,26 @@
   <div class="sidebar sticky">
   
 
-<div itemscope itemtype="http://schema.org/Person">
+
+<div itemscope itemtype="https://schema.org/Person">
 
   
     <div class="author__avatar">
       
-        <img src="http://localhost:4000/assets/images/sw2.jpg" class="author__avatar" alt="" itemprop="image">
+        <img src="/assets/images/IMG_20211213_091403_816.jpg" alt="" itemprop="image">
       
     </div>
   
 
   <div class="author__content">
-    <h3 class="author__name" itemprop="name"></h3>
     
-      <p class="author__bio" itemprop="description">
-        A data interrogator, model tinkerer on the prowl
-      </p>
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Model tinkerer on the prowl</p>
+
+      </div>
     
   </div>
 
@@ -212,9 +207,11 @@
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       
-        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
-          <i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> <span itemprop="name">Chicago, IL</span>
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">New Jersey / NYC</span>
         </li>
+      
+
       
 
       
@@ -223,7 +220,21 @@
         <li>
           <a href="mailto:wshanshan@gmail.com">
             <meta itemprop="email" content="wshanshan@gmail.com" />
-            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/shanshan-w-nj" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span>
           </a>
         </li>
       
@@ -238,24 +249,8 @@
 
       
         <li>
-          <a href="https://www.linkedin.com/in/shanshan-wang-56590115" itemprop="sameAs">
-            <i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> LinkedIn
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-        <li>
-          <a href="https://github.com/wshanshan" itemprop="sameAs">
-            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          <a href="https://github.com/wshanshan" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
           </a>
         </li>
       
@@ -288,8 +283,8 @@
 
       <!--
   <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
-      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
     </a>
   </li>
 -->
@@ -301,160 +296,110 @@
   </div>
 
 
+
   <div class="archive">
     
-    <h3 class="archive__subtitle">Recent Posts</h3>
+    
+
+<h3 class="archive__subtitle">Recent Posts</h3>
 
 
+
+
+<div class="entries-list">
   
+    
 
 
 
 <div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="http://localhost:4000/machine%20learning/MachineLearningDaries/" rel="permalink">Sep28 Ada tree is a good tree
+        <a href="/python/asciiart/" rel="permalink">Convert Photos to ASCII Arts with Python
 </a>
       
     </h2>
     
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
 
-
-
-
-  less than 1 minute read
-</p>
+  <p class="page__meta">
     
-    <p class="archive__item-excerpt" itemprop="description">I got asked a lot about the question: Are you familiar with random forest, boosting trees, gradient descent? Do you understand boostrap, cross-validation? Te...</p>
-  </article>
-</div>
 
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+
+    
       
-        <a href="http://localhost:4000/simulation/distributionInSimulation/" rel="permalink">When mean and standard deviation are enough
-</a>
       
-    </h2>
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
     
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+  </p>
 
 
-
-
-  3 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/python/asciiart/" rel="permalink">Convert Photos to ASCII Arts with Python
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-
-
-
-
-  6 minute read
-</p>
-    
     <p class="archive__item-excerpt" itemprop="description">This post shows you how to create ASCII art from an existing picture using Python.
 </p>
   </article>
 </div>
 
   
+    
 
 
 
 <div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="http://localhost:4000/python/from-python-console-to-web-application/" rel="permalink">Convert a Console Python Application to a Web Application
+        <a href="/datadoesnotlie/Chicago-Daycare/" rel="permalink">Why can’t I find a daycare
 </a>
       
     </h2>
     
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
 
-
-
-
-  5 minute read
-</p>
+  <p class="page__meta">
     
-    <p class="archive__item-excerpt" itemprop="description">
 
-     Table of Contents
-
-  
-
-
-</p>
-  </article>
-</div>
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+
+    
       
-        <a href="http://localhost:4000/datadoesnotlie/Chicago-Daycare/" rel="permalink">Why can’t I find a daycare
-</a>
       
-    </h2>
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
     
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+  </p>
 
 
-
-
-  3 minute read
-</p>
-    
     <p class="archive__item-excerpt" itemprop="description">Data visualization and location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census.
 </p>
   </article>
 </div>
 
+  
+</div>
 
 
 
 
   </div>
 </div>
+    </div>
 
-    <div class="page__footer">
+    
+
+    <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
 
@@ -464,38 +409,26 @@
     
       <li><strong>Follow:</strong></li>
     
+
     
+
     
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
-      <li><a href="http://github.com/wshanshan"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
-    
-    
-    
-    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2017 Shanshan Wang. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 Shanshan Wang. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
-    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+    
+  <script src="/assets/js/main.min.js"></script>
 
 
 
 
-  <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-104088948-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 
 
 
