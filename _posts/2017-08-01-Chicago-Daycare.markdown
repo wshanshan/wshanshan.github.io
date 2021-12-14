@@ -1,7 +1,7 @@
 ---
-title:  "Visualization of Chicago Daycare Locations"
-categories: Data Visualization
-tags: Geopandas OpenData
+title:  "Visualization of Chicago Daycare Data"
+categories: OpenData
+tags: Geopandas OpenData Geocoding
 excerpt: Data visualization and location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census.
 toc: true
 ---
@@ -10,7 +10,7 @@ When I started to look for a daycare in Chicago around 2016 , I thought it would
 
 But after months of searching, I couldn't find any available spot. I finally gave up but couldn't stop wondering: Is it only my bad luck or does everyone else have the same problem? Why?
 
-I downloaded data from [daycare license authority, DCFS](https://sunshine.dcfs.illinois.gov/Content/Licensing/Daycare/ProviderLookup.aspx) and queried the geolocations of all the licensed daycare providers using Google Geocoding API. The plots are interesting. 
+I downloaded data from [Illinois daycare license authority, DCFS](https://sunshine.dcfs.illinois.gov/Content/Licensing/Daycare/ProviderLookup.aspx) and queried the geolocations of all the licensed daycare providers using Google Geocoding API. The plots are interesting. 
 
 ## Basics of Chicago Daycares
 
