@@ -1,7 +1,7 @@
 ---
 title:  "Convert Photos to ASCII Arts with Python"
 categories: Python
-tags: Python ASCII Art Tutorial
+tags: Python Art Tutorial
 gallery:
   - url: /assets/images/asciiart/IQaH96.jpeg
     image_path: /assets/images/asciiart/IQaH96.jpeg
