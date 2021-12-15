@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Why can’t I find a daycare - Tinkering</title>
+<!-- begin _includes/seo.html --><title>Visualization of Chicago Daycare Data - Tinkering</title>
 <meta name="description" content="Data visualization and location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census.">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="Tinkering">
-<meta property="og:title" content="Why can’t I find a daycare">
-<meta property="og:url" content="http://localhost:4000/datadoesnotlie/Chicago-Daycare/">
+<meta property="og:title" content="Visualization of Chicago Daycare Data">
+<meta property="og:url" content="http://localhost:4000/opendata/Chicago-Daycare/">
 
 
   <meta property="og:description" content="Data visualization and location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census.">
@@ -40,7 +40,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/datadoesnotlie/Chicago-Daycare/">
+<link rel="canonical" href="http://localhost:4000/opendata/Chicago-Daycare/">
 
 
 
@@ -51,7 +51,8 @@
     
       "@type": "Person",
       "name": "Shanshan Wang",
-      "url": "http://localhost:4000/"
+      "url": "http://localhost:4000/",
+      "sameAs": ["https://www.linkedin.com/in/shanshan-w-nj"]
     
   }
 </script>
@@ -119,10 +120,6 @@
               <a href="/about/">About</a>
             </li><li class="masthead__menu-item">
               <a href="/categories/">Categories</a>
-            </li><li class="masthead__menu-item">
-              <a href="/tags/">Tags</a>
-            </li><li class="masthead__menu-item">
-              <a href="/year-archive/">Archive</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -179,6 +176,16 @@
       
 
       
+        
+          
+            <li><a href="https://www.linkedin.com/in/shanshan-w-nj" rel="nofollow noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/wshanshan" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
 
       
 
@@ -198,12 +205,6 @@
       
 
       
-        <li>
-          <a href="https://www.linkedin.com/in/shanshan-w-nj" itemprop="sameAs" rel="nofollow noopener noreferrer">
-            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span>
-          </a>
-        </li>
-      
 
       
 
@@ -213,12 +214,6 @@
 
       
 
-      
-        <li>
-          <a href="https://github.com/wshanshan" itemprop="sameAs" rel="nofollow noopener noreferrer">
-            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
-          </a>
-        </li>
       
 
       
@@ -264,7 +259,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Why can’t I find a daycare">
+    <meta itemprop="headline" content="Visualization of Chicago Daycare Data">
     <meta itemprop="description" content="Data visualization and location analysis of Chicago daycares. Data from Illinois DCFS, Chicago Data Portal, Google Geocoding and US Census.">
     <meta itemprop="datePublished" content="2017-08-01T00:00:00-04:00">
     
@@ -272,14 +267,21 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Why can’t I find a daycare
+          <h1 id="page-title" class="page__title" itemprop="headline">Visualization of Chicago Daycare Data
 </h1>
           
 
   <p class="page__meta">
     
-
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2017-08-01T00:00:00-04:00">August 1, 2017</time>
+      </span>
     
+
+    <span class="page__meta-sep"></span>
 
     
       
@@ -308,15 +310,15 @@
             </nav>
           </aside>
         
-        <p>When I started to look for a daycare, I thought it would be a piece of cake. After all, I live in a neighborhood full of young families - Lake View, Chicago. It is <a href="https://gist.github.com/wshanshan/e150855f7b09bebc9b1064e30e55a071">2nd in population</a> among Chicago’s 77 communities.</p>
+        <p>When I started to look for a daycare in Chicago around 2016 , I thought it would be a piece of cake (how naive!). After all, I live in a neighborhood full of young families - Lake View, Chicago. It is <a href="https://gist.github.com/wshanshan/e150855f7b09bebc9b1064e30e55a071">2nd in population</a> among Chicago’s 77 communities. I just have one ‘simple’ request: within walking distance.</p>
 
-<p>I didn’t ask much about daycares (I thought…). Besides the basics, I only have one simple wish: walking distance to home. But after months of searching, I couldn’t find any available spot. I finally gave up but couldn’t stop wondering: Is it only my bad luck or does everyone have the same problem?</p>
+<p>But after months of searching, I couldn’t find any available spot. I finally gave up but couldn’t stop wondering: Is it only my bad luck or does everyone else have the same problem? Why?</p>
 
-<p>So I went to the <a href="https://sunshine.dcfs.illinois.gov/Content/Licensing/Daycare/ProviderLookup.aspx">government website</a>, downloaded the data of all the licensed daycare providers, queried their geolocations from Google Geocoding API, and put them on a map. The findings are interesting.</p>
+<p>I downloaded data from <a href="https://sunshine.dcfs.illinois.gov/Content/Licensing/Daycare/ProviderLookup.aspx">Illinois daycare license authority, DCFS</a> and queried the geolocations of all the licensed daycare providers using Google Geocoding API. The plots are interesting.</p>
 
 <h2 id="basics-of-chicago-daycares">Basics of Chicago Daycares</h2>
 
-<p>Chicago has a lot of daycares ~ 2500. It’s 25% of Illnois’s total counts. Considering Chicago has 21% of state population (2.705 million in 12.8 million, 2016 US Census estimates), it’s reasonable.</p>
+<p>Chicago has ~ 2500 licensed daycares. It’s 25% of Illnois’s total counts. Considering Chicago has 21% of state population (2.705 million in 12.8 million, 2016 US Census estimates), it’s reasonable.</p>
 
 <figure class="align-right">
   <img src="/assets/images/chicagoDaycares/pie_countsByType.png" alt="Illinois childcare counts by type" /></figure>
@@ -325,7 +327,7 @@
 
 <p>There are three types of licensed childcare providers: <em>daycare centers</em>, <em>home daycares</em>, and <em>group home daycares</em>. <em>Home daycares</em> and <em>group daycares</em> are usually small operations at someone’s home. Limited by their <a href="http://ccrs.illinois.edu/providers/licensing.html">licenses</a>, they can care for up to 8 to 16 kids. <em>Daycare centers</em> are much bigger. The average capacity is around ~ 70. Some large ones have capacity greater than 300.</p>
 
-<p>Most of the childcare providers in Illinois are either home daycares or group home daycares (~71%). Nevertheless, daycare centers provide ~74% of total capacity.</p>
+<p>~71% childcare providers in Illinois are either home daycares or group home daycares. Nevertheless, daycare centers provide ~74% of total capacity.</p>
 
 <h2 id="location-location-location">Location, Location, Location</h2>
 
@@ -334,7 +336,7 @@
 <figure class="align-center">
   <img src="/assets/images/chicagoDaycares/scatterplot_locations.png" alt="Chicago daycare locations" /></figure>
 
-<p>Why is it happening? Maybe people living in central and north sides don’t like the idea of opening daycares in their homes. Maybe there are less apartment/houses in those areas appropriate for home daycares. Maybe people in these communities generally prefer daycare centers, so there is not enough demand for home-based daycares. Maybe it’s a mix of all above.</p>
+<p>Why is it happening? Maybe people living in central and north sides don’t like the idea of opening daycares in their homes? Maybe there are less apartment/houses in those areas appropriate for home daycares? Maybe people in these communities generally prefer daycare centers, so there is not enough demand for home-based daycares? It’s probably a mix of all.</p>
 
 <p>The consequence is apparent. In the communities where only big centers prevail, providers are relatively farther away from each other because of their large capacities, leaving patches of ‘empty’ space on the map.</p>
 
@@ -384,11 +386,11 @@
 
 <h2 id="on-a-final-note">On a final note</h2>
 
-<p>The data analysis perfectly explains my experience.</p>
+<p>The data results explain my experience.</p>
 
-<p>Now I drive my son to daycare everyday. I like the daycare but still don’t like the driving. But at least I know that I’m only one of many.</p>
+<p>Now I drive my kid to daycare everyday. I like the daycare but still don’t like the driving. But at least I know that I’m only one of many.</p>
 
-<p>If you happen to thinking about opening a daycare, come to my neighborhood! Your business will boom here!</p>
+<p>If you happen to thinking about opening a daycare, come to Lake View! Your business will boom here!</p>
 
 <h2 id="technical-notes">Technical notes</h2>
 
@@ -410,17 +412,11 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#chicago" class="page__taxonomy-item" rel="tag">Chicago</a><span class="sep">, </span>
+      <a href="/tags/#geocoding" class="page__taxonomy-item" rel="tag">Geocoding</a><span class="sep">, </span>
     
-      <a href="/tags/#daycare" class="page__taxonomy-item" rel="tag">daycare</a><span class="sep">, </span>
+      <a href="/tags/#geopandas" class="page__taxonomy-item" rel="tag">Geopandas</a><span class="sep">, </span>
     
-      <a href="/tags/#geopandas" class="page__taxonomy-item" rel="tag">geopandas</a><span class="sep">, </span>
-    
-      <a href="/tags/#map" class="page__taxonomy-item" rel="tag">map</a><span class="sep">, </span>
-    
-      <a href="/tags/#opendata" class="page__taxonomy-item" rel="tag">openData</a><span class="sep">, </span>
-    
-      <a href="/tags/#python" class="page__taxonomy-item" rel="tag">Python</a>
+      <a href="/tags/#opendata" class="page__taxonomy-item" rel="tag">OpenData</a>
     
     </span>
   </p>
@@ -437,7 +433,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#datadoesnotlie" class="page__taxonomy-item" rel="tag">DataDoesNotLie</a>
+      <a href="/categories/#opendata" class="page__taxonomy-item" rel="tag">OpenData</a>
     
     </span>
   </p>
@@ -455,11 +451,11 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Why+can%27t+I+find+a+daycare%20http%3A%2F%2Flocalhost%3A4000%2Fdatadoesnotlie%2FChicago-Daycare%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Visualization+of+Chicago+Daycare+Data%20http%3A%2F%2Flocalhost%3A4000%2Fopendata%2FChicago-Daycare%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdatadoesnotlie%2FChicago-Daycare%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fopendata%2FChicago-Daycare%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdatadoesnotlie%2FChicago-Daycare%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fopendata%2FChicago-Daycare%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
@@ -481,54 +477,6 @@
 
   
   
-    <div class="page__related">
-      <h4 class="page__related-title">You May Also Enjoy</h4>
-      <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/python/asciiart/" rel="permalink">Convert Photos to ASCII Arts with Python
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          6 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This post shows you how to create ASCII art from an existing picture using Python.
-</p>
-  </article>
-</div>
-
-        
-      </div>
-    </div>
-  
-  
 </div>
 
     </div>
@@ -546,6 +494,14 @@
       <li><strong>Follow:</strong></li>
     
 
+    
+      
+        
+      
+        
+          <li><a href="https://github.com/wshanshan" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
     
 
     
@@ -571,8 +527,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4000/datadoesnotlie/Chicago-Daycare/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/datadoesnotlie/Chicago-Daycare"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "http://localhost:4000/opendata/Chicago-Daycare/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/opendata/Chicago-Daycare"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
