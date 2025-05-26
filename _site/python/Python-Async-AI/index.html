@@ -1,0 +1,596 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Asynchronous Programming for AI Engineers - Tinkering</title>
+<meta name="description" content="A practical, hands-on guide to Python asynchronous programming for AI engineers who want to build faster and more responsive applications.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Tinkering">
+<meta property="og:title" content="Asynchronous Programming for AI Engineers">
+<meta property="og:url" content="http://localhost:4000/python/Python-Async-AI/">
+
+
+  <meta property="og:description" content="A practical, hands-on guide to Python asynchronous programming for AI engineers who want to build faster and more responsive applications.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-05-26T00:00:00-04:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/python/Python-Async-AI/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Shanshan Wang",
+      "url": "http://localhost:4000/",
+      "sameAs": ["https://www.linkedin.com/in/shanshan-w-nj"]
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Tinkering Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Tinkering
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/IMG_20211213_091403_816.jpg" alt="" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Model tinkerer on the prowl</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">New Jersey / NYC</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://www.linkedin.com/in/shanshan-w-nj" rel="nofollow noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/wshanshan" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:wshanshan@gmail.com">
+            <meta itemprop="email" content="wshanshan@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Asynchronous Programming for AI Engineers">
+    <meta itemprop="description" content="A practical, hands-on guide to Python asynchronous programming for AI engineers who want to build faster and more responsive applications.">
+    <meta itemprop="datePublished" content="2025-05-26T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Asynchronous Programming for AI Engineers
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>A practical, hands-on guide to Python asynchronous programming for AI engineers who want to build faster and more responsive applications.</p>
+
+<h2 id="-why-should-ai-engineers-care-about-async">🚀 Why Should AI Engineers Care About Async?</h2>
+
+<p>When you call LLM APIs or other external services, your code spends most of its time <strong>waiting</strong> for responses. Without async, your app is forced to do all the tasks in sequence. It sits there slow, unresponsive, and frustrating for users. Asynchronous programming enables your app work on parallel tasks, and respond to other user requests while waiting.</p>
+
+<h2 id="-async-in-python-the-basics">🧑‍💻 Async in Python: The Basics</h2>
+
+<p>Python’s <code class="language-plaintext highlighter-rouge">asyncio</code> module is your toolkit for writing concurrent code. Here’s what you need to know:</p>
+
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">async def</code> to define a coroutine (an async function).</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">await</code> to pause and yield control back to the event loop while waiting for something (like an API call).</li>
+  <li>Only use <code class="language-plaintext highlighter-rouge">await</code> with coroutines or “awaitable” objects.</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">say_hello</span><span class="p">():</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Hello, async world!"</span><span class="p">)</span>
+
+<span class="n">asyncio</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">say_hello</span><span class="p">())</span>
+</code></pre></div></div>
+
+<h2 id="-controlling-concurrency-dont-overwhelm-the-api">🌐 Controlling Concurrency: Don’t Overwhelm the API!</h2>
+
+<p>When making lots of API calls, you need to <strong>limit concurrency</strong> to avoid hitting rate limits or overloading servers. Use <code class="language-plaintext highlighter-rouge">asyncio.Semaphore</code> to control how many requests run at once.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">AsyncOpenAI</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">generate_text</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">semaphore</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">semaphore</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="p">.</span><span class="n">chat</span><span class="p">.</span><span class="n">completions</span><span class="p">.</span><span class="n">create</span><span class="p">(</span>
+            <span class="n">model</span><span class="o">=</span><span class="s">"gpt-3.5-turbo"</span><span class="p">,</span>
+            <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s">"role"</span><span class="p">:</span> <span class="s">"user"</span><span class="p">,</span> <span class="s">"content"</span><span class="p">:</span> <span class="n">prompt</span><span class="p">}]</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">response</span><span class="p">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">message</span><span class="p">.</span><span class="n">content</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">prompts</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s">"Tell me a fact about number </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s">"</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+    <span class="n">semaphore</span> <span class="o">=</span> <span class="n">asyncio</span><span class="p">.</span><span class="n">Semaphore</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Limit to 5 concurrent requests
+</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">AsyncOpenAI</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+        <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="n">generate_text</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">semaphore</span><span class="p">)</span> <span class="k">for</span> <span class="n">prompt</span> <span class="ow">in</span> <span class="n">prompts</span><span class="p">]</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="p">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">tasks</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">prompt</span><span class="p">,</span> <span class="n">result</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">prompts</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Prompt: </span><span class="si">{</span><span class="n">prompt</span><span class="si">}</span><span class="se">\n</span><span class="s">Response: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+
+<span class="n">asyncio</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div></div>
+
+<h2 id="️-streaming-responses-show-results-as-they-arrive">⚡️ Streaming Responses: Show Results as They Arrive</h2>
+
+<p>Why make users wait for the whole response? For long-form content generation, streaming responses can significantly improve the perceived performance of your application.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">AsyncOpenAI</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">stream_text</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+    <span class="n">stream</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="p">.</span><span class="n">chat</span><span class="p">.</span><span class="n">completions</span><span class="p">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">model</span><span class="o">=</span><span class="s">"gpt-3.5-turbo"</span><span class="p">,</span>
+        <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s">"role"</span><span class="p">:</span> <span class="s">"user"</span><span class="p">,</span> <span class="s">"content"</span><span class="p">:</span> <span class="n">prompt</span><span class="p">}],</span>
+        <span class="n">stream</span><span class="o">=</span><span class="bp">True</span>
+    <span class="p">)</span>
+
+    <span class="n">full_response</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">stream</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">chunk</span><span class="p">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">delta</span><span class="p">.</span><span class="n">content</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">content</span> <span class="o">=</span> <span class="n">chunk</span><span class="p">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">delta</span><span class="p">.</span><span class="n">content</span>
+            <span class="n">full_response</span> <span class="o">+=</span> <span class="n">content</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">full_response</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">prompt</span> <span class="o">=</span> <span class="s">"Write a short story about a time-traveling scientist."</span>
+
+    <span class="k">async</span> <span class="k">with</span> <span class="n">AsyncOpenAI</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">stream_text</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">client</span><span class="p">)</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Full response:</span><span class="se">\n</span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="n">asyncio</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div></div>
+
+<h2 id="-async-with-langchain">🔗 Async with Langchain</h2>
+
+<p>Langchain supports async out of the box. Use async methods like <code class="language-plaintext highlighter-rouge">ainvoke</code> and <code class="language-plaintext highlighter-rouge">arun</code> for LLMs and chains. Add custom async callbacks for logging or monitoring.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">langchain.llms</span> <span class="kn">import</span> <span class="n">OpenAI</span>
+<span class="kn">from</span> <span class="nn">langchain.prompts</span> <span class="kn">import</span> <span class="n">PromptTemplate</span>
+<span class="kn">from</span> <span class="nn">langchain.chains</span> <span class="kn">import</span> <span class="n">LLMChain</span>
+<span class="kn">from</span> <span class="nn">langchain.callbacks.manager</span> <span class="kn">import</span> <span class="n">AsyncCallbackManager</span>
+
+<span class="c1"># Define a custom asynchronous callback handler
+</span><span class="k">class</span> <span class="nc">MyAsyncLogHandler</span><span class="p">(</span><span class="n">BaseCallbackHandler</span><span class="p">):</span>
+    <span class="c1"># Implement the asynchronous method for LLM start event
+</span>    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_llm_start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serialized</span><span class="p">,</span> <span class="n">prompts</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"[</span><span class="si">{</span><span class="n">time</span><span class="p">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">'%H:%M:%S'</span><span class="p">)</span><span class="si">}</span><span class="s">] --- LLM Started! Prompts: </span><span class="si">{</span><span class="n">prompts</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s">..."</span><span class="p">)</span> <span class="c1"># [13] method signature
+</span>        <span class="c1"># Note: In a real async handler, you might perform awaitable operations here,
+</span>        <span class="c1"># like writing to an async database or sending data over a network.
+</span>
+    <span class="c1"># Implement the asynchronous method for LLM end event
+</span>    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_llm_end</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+         <span class="c1"># Note: The 'response' structure might vary slightly based on LLM output type
+</span>        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"[</span><span class="si">{</span><span class="n">time</span><span class="p">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">'%H:%M:%S'</span><span class="p">)</span><span class="si">}</span><span class="s">] --- LLM Ended!"</span><span class="p">)</span> 
+
+    <span class="c1"># You could implement other async methods like on_chain_start, on_tool_end, etc.
+</span>    <span class="c1"># For example:
+</span>    <span class="c1"># async def on_chain_start(self, serialized, inputs, **kwargs):
+</span>    <span class="c1">#     print(f"[{time.strftime('%H:%M:%S')}] --- Chain Started!")
+</span>
+    <span class="c1"># async def on_chain_end(self, outputs, **kwargs):
+</span>    <span class="c1">#     print(f"[{time.strftime('%H:%M:%S')}] --- Chain Ended!"
+</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">generate_story</span><span class="p">(</span><span class="n">topic</span><span class="p">):</span>
+    <span class="n">llm</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">(</span>
+        <span class="n">temperature</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> 
+        <span class="n">streaming</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> 
+        <span class="n">callback_manager</span><span class="o">=</span><span class="n">AsyncCallbackManager</span><span class="p">([</span><span class="n">MyAsyncLogHandler</span><span class="p">()])</span>
+    <span class="p">)</span>
+    <span class="n">prompt</span> <span class="o">=</span> <span class="n">PromptTemplate</span><span class="p">(</span>
+        <span class="n">input_variables</span><span class="o">=</span><span class="p">[</span><span class="s">"topic"</span><span class="p">],</span>
+        <span class="n">template</span><span class="o">=</span><span class="s">"Write a short story about {topic}."</span>
+    <span class="p">)</span>
+    <span class="n">chain</span> <span class="o">=</span> <span class="n">LLMChain</span><span class="p">(</span><span class="n">llm</span><span class="o">=</span><span class="n">llm</span><span class="p">,</span> <span class="n">prompt</span><span class="o">=</span><span class="n">prompt</span><span class="p">)</span>
+    <span class="k">return</span> <span class="k">await</span> <span class="n">chain</span><span class="p">.</span><span class="n">arun</span><span class="p">(</span><span class="n">topic</span><span class="o">=</span><span class="n">topic</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">topics</span> <span class="o">=</span> <span class="p">[</span><span class="s">"a magical forest"</span><span class="p">,</span> <span class="s">"a futuristic city"</span><span class="p">,</span> <span class="s">"an underwater civilization"</span><span class="p">]</span>
+    <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="n">generate_story</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span> <span class="k">for</span> <span class="n">topic</span> <span class="ow">in</span> <span class="n">topics</span><span class="p">]</span>
+    <span class="n">stories</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="p">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">tasks</span><span class="p">)</span>
+     
+    <span class="k">for</span> <span class="n">topic</span><span class="p">,</span> <span class="n">story</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">topics</span><span class="p">,</span> <span class="n">stories</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="se">\n</span><span class="s">Topic: </span><span class="si">{</span><span class="n">topic</span><span class="si">}</span><span class="se">\n</span><span class="s">Story: </span><span class="si">{</span><span class="n">story</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="s">'='</span><span class="o">*</span><span class="mi">50</span><span class="si">}</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+<span class="n">asyncio</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div></div>
+
+<h2 id="-tldr">📝 TL;DR</h2>
+
+<p>Async programming is a game-changer for AI engineers dealing with LLM APIs and other tasks that spend a lot of time waiting on I/O. With Python’s <code class="language-plaintext highlighter-rouge">asyncio</code>, you can fire off lots of API calls at once and keep things running much faster. Semaphores help you play nice with rate limits, and streaming responses make your apps feel snappier. Plus, async support in tools like Langchain means you can build async AI workflows easily.</p>
+
+<h2 id="-my-async-journey-tips--gotchas">💡 My Async Journey: Tips &amp; Gotchas</h2>
+
+<p>When I first started using async in my AI projects, I made a few classic mistakes—like forgetting to use <code class="language-plaintext highlighter-rouge">await</code> or accidentally mixing sync and async code. Here are a few lessons I learned:</p>
+
+<ul>
+  <li><strong>Always use <code class="language-plaintext highlighter-rouge">await</code></strong> when calling async functions, or nothing will actually run concurrently!</li>
+  <li><strong>Don’t block the event loop</strong> with heavy computations—offload those to threads or processes if needed.</li>
+  <li><strong>Test with real APIs</strong> mocking async APIs can be tricky, so I always try to test with the real thing before deploying.</li>
+</ul>
+
+<p>Async can feel weird at first, but once I got the hang of it, my apps became much more responsive and scalable. If you’re building AI apps that talk to LLMs or other APIs, I highly recommend giving async a try!</p>
+
+<h2 id="-further-reading">📚 Further Reading</h2>
+
+<ul>
+  <li><a href="https://www.unite.ai/asynchronous-llm-api-calls-in-python-a-comprehensive-guide/">Asynchronous LLM API Calls in Python: A Comprehensive Guide</a></li>
+</ul>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#python" class="page__taxonomy-item" rel="tag">Python</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-05-26T00:00:00-04:00">May 26, 2025</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Asynchronous+Programming+for+AI+Engineers%20http%3A%2F%2Flocalhost%3A4000%2Fpython%2FPython-Async-AI%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fpython%2FPython-Async-AI%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fpython%2FPython-Async-AI%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/python/asciiart/" class="pagination--pager" title="Convert Photos to ASCII Arts with Python
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+          <li><a href="https://github.com/wshanshan" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Shanshan Wang. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/python/Python-Async-AI/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/python/Python-Async-AI"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://blog-ppnrqgob2p.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

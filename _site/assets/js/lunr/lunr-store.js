@@ -10,4 +10,10 @@ var store = [{
         "tags": ["Python","Art","Tutorial"],
         "url": "/python/asciiart/",
         "teaser": "/assets/images/500x300.png"
+      },{
+        "title": "Asynchronous Programming for AI Engineers",
+        "excerpt":"A practical, hands-on guide to Python asynchronous programming for AI engineers who want to build faster and more responsive applications. 🚀 Why Should AI Engineers Care About Async? When you call LLM APIs or other external services, your code spends most of its time waiting for responses. Without async, your...","categories": ["Python"],
+        "tags": [],
+        "url": "/python/Python-Async-AI/",
+        "teaser": "/assets/images/500x300.png"
       }]

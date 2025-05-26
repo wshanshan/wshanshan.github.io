@@ -20,7 +20,6 @@ toc: true
 
 ---
 
-
 Printed ASCII art is a fabulous gift for a geeky friend. The great thing about coded artwork is that you can easily **give it your own personal touch**! It’s a stylish decoration that looks great on mugs, t-shirts, and even [curtains](http://walyou.com/blog/2008/03/17/the-tree-ascii-curtain-for-geeks/). Making ASCII art is much easier than it looks, and I'm going to show you how to do it in Python!
 
  We'll use a few Python libraries-- [Pillow](https://pillow.readthedocs.io), [Colour](https://pypi.python.org/pypi/colour) and [Numpy](https://pypi.python.org/pypi/numpy). Pillow handles all the image processing - reading, resizing, writing. Colour gives us the beautiful gradient color. Numpy makes the grayscale conversion easy. Once you understand how sample codes work, you can change fonts/symbols and try out different colors, to turn your favorite picture into your unique signature artwork. 
