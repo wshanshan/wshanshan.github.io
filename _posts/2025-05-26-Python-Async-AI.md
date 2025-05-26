@@ -98,7 +98,7 @@ asyncio.run(main())
 
 ## 🔗 Async with Langchain
 
-Langchain supports async out of the box. Use async methods like `ainvoke` and `arun` for LLMs and chains. Add custom async callbacks for logging or monitoring.
+Langchain supports async out of the box. Use async methods like `ainvoke` and `arun`. Add custom async callbacks for logging or monitoring.
 
 ```python
 import asyncio
@@ -169,5 +169,3 @@ Async can feel weird at first, but once I got the hang of it, my apps became muc
 ## 📚 Further Reading
 
 - [Asynchronous LLM API Calls in Python: A Comprehensive Guide](https://www.unite.ai/asynchronous-llm-api-calls-in-python-a-comprehensive-guide/)
-
-
