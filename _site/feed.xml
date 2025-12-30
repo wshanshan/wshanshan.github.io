@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-26T16:20:52-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tinkering</title><subtitle>An amazing website about data, model, code and fun projects</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/IMG_20211213_091403_816.jpg&quot;, &quot;bio&quot;=&gt;&quot;Model tinkerer on the prowl&quot;, &quot;location&quot;=&gt;&quot;New Jersey / NYC&quot;, &quot;email&quot;=&gt;&quot;wshanshan@gmail.com&quot;, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Linkedin&quot;, &quot;icon&quot;=&gt;&quot;fab fa-linkedin&quot;, &quot;url&quot;=&gt;&quot;https://www.linkedin.com/in/shanshan-w-nj&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;, &quot;url&quot;=&gt;&quot;https://github.com/wshanshan&quot;}]}</name><email>wshanshan@gmail.com</email></author><entry><title type="html">Asynchronous Programming for AI Engineers</title><link href="http://localhost:4000/python/Python-Async-AI/" rel="alternate" type="text/html" title="Asynchronous Programming for AI Engineers" /><published>2025-05-26T00:00:00-04:00</published><updated>2025-05-26T00:00:00-04:00</updated><id>http://localhost:4000/python/Python-Async-AI</id><content type="html" xml:base="http://localhost:4000/python/Python-Async-AI/">&lt;p&gt;A practical, hands-on guide to Python asynchronous programming for AI engineers who want to build faster and more responsive applications.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-12-29T10:27:24-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tinkering</title><subtitle>An amazing website about data, model, code and fun projects</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/IMG_20211213_091403_816.jpg&quot;, &quot;bio&quot;=&gt;&quot;Model tinkerer on the prowl&quot;, &quot;location&quot;=&gt;&quot;New Jersey / NYC&quot;, &quot;email&quot;=&gt;&quot;wshanshan@gmail.com&quot;, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Linkedin&quot;, &quot;icon&quot;=&gt;&quot;fab fa-linkedin&quot;, &quot;url&quot;=&gt;&quot;https://www.linkedin.com/in/shanshan-w-nj&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;, &quot;url&quot;=&gt;&quot;https://github.com/wshanshan&quot;}]}</name><email>wshanshan@gmail.com</email></author><entry><title type="html">Day 1 - Build a Pixel Art Web App</title><link href="http://localhost:4000/vibebuilding/Day1-build-a-pixel-art-web-app/" rel="alternate" type="text/html" title="Day 1 - Build a Pixel Art Web App" /><published>2025-12-19T00:00:00-05:00</published><updated>2025-12-19T00:00:00-05:00</updated><id>http://localhost:4000/vibebuilding/Day1-build-a-pixel-art-web-app</id><content type="html" xml:base="http://localhost:4000/vibebuilding/Day1-build-a-pixel-art-web-app/">&lt;p&gt;Take-aways after builing and publishing a &lt;a href=&quot;https://wshanshan.github.io/pixelart/&quot;&gt;pixel art web app&lt;/a&gt; using Cursor.&lt;/p&gt;
+
+&lt;figure class=&quot; &quot;&gt;
+  
+    
+      &lt;a href=&quot;/assets/images/20251219/duck-pixel-art.png&quot; title=&quot;yellow duck in pixelart&quot;&gt;
+          &lt;img src=&quot;/assets/images/20251219/duck-pixel-art.png&quot; alt=&quot;yellow duck in pixelart&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+  
+    &lt;figcaption&gt;Yellow Duck in pixels
+&lt;/figcaption&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Pros:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Quick start&lt;/strong&gt; I simply started the development by typing ‘Design and implement a web site that can convert a picture to pixel design.’ The agent quickly recognizes the lack of details in this request and prompts me with design questions and multiple answer options to select &lt;a href=&quot;/assets/images/20251219/Screenshot 2025-12-29 at 9.46.03 AM.png&quot;&gt;Screenshot&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Almost no-code&lt;/strong&gt; I didn’t change any line of codes. The only thing I did is creating a Github repo and changing the repo’s Gitpub Page Settings to publish the page. However, the whole experience probably won’t be this smooth if I didn’t already have development environment on my computer (e.g. github credentials).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Fast&lt;/strong&gt; It only takes an hour to create and publish the web app! It’s spectacular considering I have limited frontend and javascript experiences.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Basic output&lt;/strong&gt; The web app is basic. Many upgrades are needed for it to become ‘usable’ in my standards. For example, the app should adjust the pixel generation parameters based on properties of input image. The app is more of a toy than a complete ‘product feature’.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Take-away: Agent has been &lt;strong&gt;a super effective ‘teacher’&lt;/strong&gt; in showing me how to create a simple web app, and it’s great in &lt;strong&gt;hitting the basic requirements&lt;/strong&gt;. I’m impressed by its efficiency under minimal human inputs. I’m not that impressed by the quality of the web app (e.g. user friendliness) - however, the lack of design details is probably what I should expect as a result of providing minimal instructions.&lt;/p&gt;
+
+&lt;p&gt;Overall, I would definitely use coding agents more in future for proptotypes.&lt;/p&gt;
+
+&lt;p&gt;Git Repo: https://github.com/wshanshan/pixelart&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;&quot;/assets/images/IMG_20211213_091403_816.jpg&quot;, &quot;bio&quot;=&gt;&quot;Model tinkerer on the prowl&quot;, &quot;location&quot;=&gt;&quot;New Jersey / NYC&quot;, &quot;email&quot;=&gt;&quot;wshanshan@gmail.com&quot;, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Linkedin&quot;, &quot;icon&quot;=&gt;&quot;fab fa-linkedin&quot;, &quot;url&quot;=&gt;&quot;https://www.linkedin.com/in/shanshan-w-nj&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;, &quot;url&quot;=&gt;&quot;https://github.com/wshanshan&quot;}]}</name><email>wshanshan@gmail.com</email></author><category term="VibeBuilding" /><category term="LLM" /><summary type="html">Take-aways after builing and publishing a pixel art web app using Cursor.</summary></entry><entry><title type="html">Asynchronous Programming for AI Engineers</title><link href="http://localhost:4000/python/Python-Async-AI/" rel="alternate" type="text/html" title="Asynchronous Programming for AI Engineers" /><published>2025-05-26T00:00:00-04:00</published><updated>2025-05-26T00:00:00-04:00</updated><id>http://localhost:4000/python/Python-Async-AI</id><content type="html" xml:base="http://localhost:4000/python/Python-Async-AI/">&lt;p&gt;A practical, hands-on guide to Python asynchronous programming for AI engineers who want to build faster and more responsive applications.&lt;/p&gt;
 
 &lt;h2 id=&quot;-why-should-ai-engineers-care-about-async&quot;&gt;🚀 Why Should AI Engineers Care About Async?&lt;/h2&gt;
 
@@ -91,7 +130,7 @@
 
 &lt;h2 id=&quot;-async-with-langchain&quot;&gt;🔗 Async with Langchain&lt;/h2&gt;
 
-&lt;p&gt;Langchain supports async out of the box. Use async methods like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ainvoke&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;arun&lt;/code&gt; for LLMs and chains. Add custom async callbacks for logging or monitoring.&lt;/p&gt;
+&lt;p&gt;Langchain supports async out of the box. Use async methods like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ainvoke&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;arun&lt;/code&gt;. Add custom async callbacks for logging or monitoring.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;asyncio&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;langchain.llms&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OpenAI&lt;/span&gt;

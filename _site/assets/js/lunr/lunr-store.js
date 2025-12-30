@@ -16,4 +16,10 @@ var store = [{
         "tags": [],
         "url": "/python/Python-Async-AI/",
         "teaser": "/assets/images/500x300.png"
+      },{
+        "title": "Day 1 - Build a Pixel Art Web App",
+        "excerpt":"Take-aways after builing and publishing a pixel art web app using Cursor. Yellow Duck in pixels Pros: Quick start I simply started the development by typing ‘Design and implement a web site that can convert a picture to pixel design.’ The agent quickly recognizes the lack of details in this...","categories": ["VibeBuilding"],
+        "tags": ["LLM"],
+        "url": "/vibebuilding/Day1-build-a-pixel-art-web-app/",
+        "teaser": "/assets/images/500x300.png"
       }]
