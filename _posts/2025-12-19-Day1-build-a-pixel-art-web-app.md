@@ -1,5 +1,5 @@
 ---
-title:  Day 1 - Build a Pixel Art Web App
+title:  Day 1 Vibe Coding - Build a Pixel Art Web App
 categories: VibeBuilding
 tags: LLM
 gallery:
