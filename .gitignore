@@ -1,1 +1,15 @@
+# Build output
+dist/
+.astro/
+
+# Pagefind search index (generated at build time)
+public/pagefind/
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+
+# OS files
 .DS_Store
