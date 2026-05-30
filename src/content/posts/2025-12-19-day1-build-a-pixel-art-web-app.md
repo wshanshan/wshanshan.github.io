@@ -9,7 +9,10 @@ draft: false
 
 Take-aways after building and publishing a [pixel art web app](https://wshanshan.github.io/pixelart/) using Cursor.
 
-![Yellow duck in pixel art](/assets/images/20251219/duck-pixel-art.png)
+<div style="display:flex;gap:8px;">
+  <img src="/assets/images/20251219/rose_garden.jpeg" alt="origin" style="width:50%;object-fit:cover;" />
+  <img src="/assets/images/20251219/pixel-rose_garden.png" alt="generated" style="width:50%;object-fit:cover;" />
+</div>
 
 Pros:
 * **Quick start** I simply started the development by typing 'Design and implement a web site that can convert a picture to pixel design.' The agent quickly recognizes the lack of details in this request and prompts me with design questions and multiple answer options to select.
